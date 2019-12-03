@@ -1,0 +1,99 @@
+:root {
+  --theme-black: #101010;
+  --theme-blue: #333850;
+  --theme-red: #851b22;
+  --theme-orange: #ffad43;
+  --theme-light-gray: #d5d5d4;
+  --theme-light-blue: #53add0;
+}
+
+html {
+  scroll-behavior: Smooth;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/*  remember accecebility */
+*:focus {
+  outline: 0;
+}
+
+img,
+svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.04rem;
+  color: var(--font_color);
+  background-color: var(--bg_gray);
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "TequilaSunset-Regular";
+  src: url("webfonts/TequilaSunset-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("webfonts/TequilaSunset-Regular.otf") format("opentype"),
+    url("webfonts/TequilaSunset-Regular.woff") format("woff"),
+    url("webfonts/TequilaSunset-Regular.ttf") format("truetype"),
+    url("webfonts/TequilaSunset-Regular.svg#TequilaSunset-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.vertical_header {
+  font-family: "TequilaSunset-Regular";
+  font-size: 3.5rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
