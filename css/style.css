@@ -1,10 +1,12 @@
 :root {
+  scroll-behavior: Smooth;
   --theme-black: #101010;
   --theme-blue: #333850;
   --theme-red: #851b22;
   --theme-orange: #ffad43;
   --theme-light-gray: #d5d5d4;
   --theme-light-blue: #53add0;
+  --theme-font-color: #211d1d;
 }
 
 html {
@@ -31,14 +33,14 @@ svg {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  letter-spacing: 0.04rem;
+  font-size: 1rem;
+  line-height: 1.6rem;
   color: var(--font_color);
-  background-color: var(--bg_gray);
   min-height: 100%;
   overflow-x: hidden;
 }
@@ -96,4 +98,12 @@ h3 {
 h4 {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.red {
+  background-color: red;
+}
+
+.hide {
+  display: none;
 }
