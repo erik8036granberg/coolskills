@@ -1,3 +1,4 @@
+/* colors */
 :root {
   scroll-behavior: Smooth;
   --theme-black: #101010;
@@ -9,6 +10,7 @@
   --theme-font-color: #211d1d;
 }
 
+/* main stuff */
 html {
   scroll-behavior: Smooth;
   overflow-x: hidden;
@@ -39,12 +41,27 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.6rem;
-  color: var(--font_color);
+  line-height: 0;
+  color: var(--theme-font-color);
   min-height: 100%;
+  position: relative;
   overflow-x: hidden;
+  min-height: 300vh;
 }
 
+body > div {
+  line-height: 1.6rem;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* fonts & links */
 a,
 a:link,
 a:active,
@@ -100,10 +117,123 @@ h4 {
   line-height: 1.5rem;
 }
 
-.red {
-  background-color: red;
+/* nav */
+
+nav #logo {
+  max-width: 50vw;
+  margin: 0 7vw 0 0;
 }
 
-.hide {
-  display: none;
+nav {
+  width: 100%;
+  background-color: var(--theme-black);
+  position: fixed;
+  padding: 3vw 7vw 4vw 7vw;
+  z-index: 500;
+}
+
+.nav_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktop {
+  max-height: 4rem;
+}
+
+.menu {
+  cursor: pointer;
+  border: none;
+  z-index: 999;
+  transition: 0.5s;
+}
+
+.menu .bar1,
+.menu .bar2,
+.menu .bar3 {
+  height: 2px;
+  margin: 8px 0;
+  transition: 0.4s;
+  background-color: #fff;
+}
+
+.menu .bar1 {
+  width: 30px;
+}
+
+.menu .bar2 {
+  width: 30px;
+}
+
+.menu .bar3 {
+  width: 30px;
+}
+
+.menu:hover {
+  transform: scale(1.33);
+}
+
+.menu:hover .bar2 {
+  margin-left: 0;
+}
+
+/* header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: yellow;
+  z-index: 0;
+}
+
+/* main */
+
+main {
+  background-color: var(--theme-light-gray);
+  z-index: 250;
+  position: relative;
+  margin: 100vh 0 0 0;
+}
+
+/* main */
+
+section {
+  background-color: var(--theme-light-gray);
+  min-height: 100vh;
+}
+
+/* koncept */
+
+#koncept {
+  background-color: lightgreen;
+  min-height: 100vh;
+}
+
+/* udvikling */
+
+#udvikling {
+  background-color: lightblue;
+  min-height: 100vh;
+}
+
+/* bestil */
+
+#bestil {
+  background-color: green;
+  min-height: 100vh;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--theme-black);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  z-index: 250;
 }
