@@ -119,13 +119,15 @@ h4 {
 
 /* nav */
 
-nav #logo {
+#logo {
   max-width: 50vw;
-  margin: 0 7vw 0 0;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
 }
 
 nav {
   width: 100%;
+  min-height: 3rem;
   background-color: var(--theme-black);
   position: fixed;
   padding: 3vw 7vw 4vw 7vw;
@@ -148,14 +150,15 @@ nav {
   border: none;
   z-index: 999;
   transition: 0.5s;
+  transform: scale(1.2);
 }
 
 .menu .bar1,
 .menu .bar2,
 .menu .bar3 {
   height: 2px;
-  margin: 8px 0;
-  transition: 0.4s;
+  margin: 8px 0 0;
+  transition: 0.5s;
   background-color: #fff;
 }
 
@@ -171,8 +174,20 @@ nav {
   width: 30px;
 }
 
+.change .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .menu:hover {
-  transform: scale(1.33);
+  transform: scale(1.4);
 }
 
 .menu:hover .bar2 {
@@ -236,4 +251,16 @@ footer {
   min-height: 100vh;
   position: relative;
   z-index: 250;
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 500px) {
+  nav {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  #logo {
+    max-width: 12rem;
+  }
 }
