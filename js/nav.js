@@ -4,14 +4,11 @@ const nav = document.querySelector("nav");
 const nav_ul = document.querySelector("nav ul");
 const logo = document.querySelector("#logo");
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", event => {
   navMenu();
   scrolledMenu();
-  document.querySelector("#logo").addEventListener("click", () => {
-    window.location = "/index.html#start";
-    if (mobileMenu === "open") {
-      closeMenu();
-    }
+  logo.addEventListener("click", () => {
+    window.location = "index.html#start";
   });
 });
 
@@ -25,7 +22,6 @@ function openMenu() {
   menu.classList.add("change");
   menu.removeEventListener("click", openMenu);
   menu.addEventListener("click", closeMenu);
-  nav.classList.remove("up");
   nav.classList.add("down");
   nav.classList.remove("in");
   if (window.innerWidth < 900) {
@@ -48,7 +44,6 @@ function closeMenu() {
   if (window.innerWidth < 900) {
     setTimeout(() => {
       nav.classList.remove("down");
-      nav.classList.add("up");
       nav.classList.remove("in");
       logo.classList.remove("fadeout");
     }, 200);
