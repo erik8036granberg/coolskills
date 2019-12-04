@@ -41,6 +41,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
+  line-height: 0;
   color: var(--theme-font-color);
   min-height: 100%;
   position: relative;
@@ -48,7 +49,7 @@ body {
   min-height: 300vh;
 }
 
-body div {
+body > div {
   line-height: 1.6rem;
 }
 
@@ -119,70 +120,33 @@ h4 {
 /* nav */
 
 #logo {
-  position: absolute;
-  top: 2vh;
-  left: 6vw;
-  width: 12rem;
+  max-width: 50vw;
   margin: 0 1rem 0 0;
   cursor: pointer;
 }
 
 nav {
   width: 100%;
-  background-color: var(--theme-black);
+  background-color: red;
   position: fixed;
-  top: 0;
+  padding: 3vw 7vw 7vw 7vw;
   transition: 0.3s ease-out;
   z-index: 500;
 }
 
-#nav {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-nav ul {
-  color: #fff;
-  font-family: "Bebas Neue", cursive;
-  font-size: 2rem;
-  line-height: 10vh;
-  transition: 0.3s ease-out;
-  margin: 0 0 2vh;
-  position: relative;
-}
-
-.nav_up {
-  transform: translateY(-50vh);
-  opacity: 0;
-}
-
-.nav_down {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-nav ul li::before {
-  display: inline-flex;
-  position: relative;
-  width: 1.75rem;
-  height: 2rem;
-  top: 0.2rem;
-  margin: 0.5rem 1rem 0 0;
-  content: "";
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(../img/coolskills-logo-symbol-orange.svg);
-}
-
 nav.up {
-  min-height: 5.25rem;
+  min-height: 4.5rem;
 }
 
 nav.down {
   min-height: 100vh;
+}
+
+.nav_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .desktop {
@@ -190,14 +154,12 @@ nav.down {
 }
 
 .menu {
-  position: absolute;
-  top: 1.4rem;
-  right: 2rem;
   cursor: pointer;
   border: none;
   z-index: 999;
   transition: 0.5s;
   transform: scale(1.2);
+  margin: 0.3 0 0;
 }
 
 .menu .bar1,
@@ -299,4 +261,11 @@ footer {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 500px) {
+  nav {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  #logo {
+    max-width: 12rem;
+  }
 }
