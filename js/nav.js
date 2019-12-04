@@ -25,11 +25,9 @@ function openMenu() {
   nav.classList.add("down");
   nav.classList.remove("in");
   if (window.innerWidth < 900) {
-    setTimeout(() => {
-      nav_ul.classList.remove("nav_up");
-      nav_ul.classList.add("nav_down");
-      logo.classList.add("fadeout");
-    }, 200);
+    nav_ul.classList.remove("nav_up");
+    nav_ul.classList.add("nav_down");
+    logo.classList.add("fadeout");
   }
   mobileMenu = "open";
 }
@@ -42,11 +40,9 @@ function closeMenu() {
   nav_ul.classList.remove("nav_down");
   nav_ul.classList.add("nav_up");
   if (window.innerWidth < 900) {
-    setTimeout(() => {
-      nav.classList.remove("down");
-      nav.classList.remove("in");
-      logo.classList.remove("fadeout");
-    }, 200);
+    nav.classList.remove("down");
+    nav.classList.remove("in");
+    logo.classList.remove("fadeout");
   }
   mobileMenu = "closed";
 }
@@ -63,7 +59,7 @@ function scrolledMenu() {
         nav.classList.remove("out");
         nav.classList.add("in");
         scrolledMenu();
-      }, 1000);
+      }, 500);
     }
   }
 }

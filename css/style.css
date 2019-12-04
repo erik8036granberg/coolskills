@@ -126,10 +126,6 @@ h4 {
   transition: 0.5s ease-in;
 }
 
-#logo a {
-  display: block;
-}
-
 #logo.fadeout {
   opacity: 0;
   pointer-events: none;
@@ -252,7 +248,7 @@ nav.in {
   margin-left: 0;
 }
 
-/* spalsh */
+/* splash */
 
 #start {
   position: absolute;
@@ -260,8 +256,15 @@ nav.in {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: yellow;
+  display: grid;
   z-index: 0;
+}
+
+#frame_1_fire {
+  background-image: url(../img/fire_mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* main */
@@ -311,12 +314,23 @@ footer {
   z-index: 250;
 }
 
-/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries mobile landscape- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
-@media screen and (min-width: 500px) {
+@media only screen and (max-width: 888px) and (orientation: landscape) {
+  #frame_1_fire {
+    background-image: url(../img/fire_mobile_landscape.jpg);
+  }
 }
 
-/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries tablet portrait 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 500px) {
+  #frame_1_fire {
+    background-image: url(../img/fire_tablet_portrait.jpg);
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 800px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 800px) {
   .menu {
@@ -354,5 +368,29 @@ footer {
 
   nav ul li::before {
     display: none;
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px tablet landscape- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media only screen and (max-width: 1080px) and (orientation: landscape) {
+  #frame_1_fire {
+    background-image: url(../img/fire_tablet_landscape.jpg);
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1366px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 1080px) {
+  #frame_1_fire {
+    background-image: url(../img/fire_desktop.jpg);
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries hd 1920px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 1366px) {
+  #frame_1_fire {
+    background-image: url(../img/fire_desktop.jpg);
   }
 }
