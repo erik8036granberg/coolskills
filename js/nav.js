@@ -1,8 +1,12 @@
 let mobileMenu = "closed";
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("nav");
+const nav_ul = document.querySelector("nav ul");
+const logo = document.querySelector("#logo");
 
 document.addEventListener("DOMContentLoaded", function(event) {
   navMenu();
-  //   fadeMenu();
+  scrolledMenu();
   document.querySelector("#logo").addEventListener("click", () => {
     window.location = "/index.html#start";
     if (mobileMenu === "open") {
@@ -13,12 +17,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function navMenu() {
   document.querySelector(".menu").addEventListener("click", openMenu);
-  //   document.querySelector("nav ul").addEventListener("click", closeMenu);
+  nav_ul.addEventListener("click", closeMenu);
 }
-
-const menu = document.querySelector(".menu");
-const nav = document.querySelector("nav");
-const nav_ul = document.querySelector("nav ul");
 
 function openMenu() {
   console.log("menu open");
@@ -27,11 +27,13 @@ function openMenu() {
   menu.addEventListener("click", closeMenu);
   nav.classList.remove("up");
   nav.classList.add("down");
+  nav.classList.remove("in");
   if (window.innerWidth < 900) {
     setTimeout(() => {
       nav_ul.classList.remove("nav_up");
       nav_ul.classList.add("nav_down");
-    }, 250);
+      logo.classList.add("fadeout");
+    }, 200);
   }
   mobileMenu = "open";
 }
@@ -47,7 +49,26 @@ function closeMenu() {
     setTimeout(() => {
       nav.classList.remove("down");
       nav.classList.add("up");
-    }, 250);
+      nav.classList.remove("in");
+      logo.classList.remove("fadeout");
+    }, 200);
   }
   mobileMenu = "closed";
+}
+
+function scrolledMenu() {
+  window.addEventListener("scroll", scrolled);
+
+  function scrolled() {
+    window.removeEventListener("scroll", scrolled);
+    if (mobileMenu !== "open") {
+      nav.classList.remove("in");
+      nav.classList.add("out");
+      setTimeout(function() {
+        nav.classList.remove("out");
+        nav.classList.add("in");
+        scrolledMenu();
+      }, 1000);
+    }
+  }
 }

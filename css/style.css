@@ -125,6 +125,12 @@ h4 {
   width: 12rem;
   margin: 0 1rem 0 0;
   cursor: pointer;
+  transition: 0.5s ease-in;
+}
+
+#logo.fadeout {
+  opacity: 0;
+  pointer-events: none;
 }
 
 nav {
@@ -132,8 +138,9 @@ nav {
   background-color: var(--theme-black);
   position: fixed;
   top: 0;
-  transition: 0.3s ease-out;
+  transition: 0.5s ease-out;
   z-index: 500;
+  opacity: 1;
 }
 
 #nav {
@@ -151,6 +158,10 @@ nav ul {
   transition: 0.3s ease-out;
   margin: 0 0 2vh;
   position: relative;
+}
+
+nav ul li {
+  cursor: pointer;
 }
 
 .nav_up {
@@ -175,6 +186,7 @@ nav ul li::before {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/coolskills-logo-symbol-orange.svg);
+  transition: 0.3s ease-out;
 }
 
 nav.up {
@@ -183,6 +195,14 @@ nav.up {
 
 nav.down {
   min-height: 100vh;
+}
+
+nav.out {
+  transform: translateY(-10rem);
+}
+
+nav.in {
+  transition: 2s ease-in-out;
 }
 
 .desktop {
