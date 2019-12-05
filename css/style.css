@@ -454,6 +454,14 @@ footer {
   #frame_1_fire {
     background-image: url(../img/fire_tablet_landscape.jpg);
   }
+
+  #frame_1_fire .support {
+    width: 15vh;
+    height: auto;
+    bottom: 40vh;
+    left: auto;
+    right: 10vw;
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1366px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -461,6 +469,17 @@ footer {
 @media screen and (min-width: 1080px) {
   #frame_1_fire {
     background-image: url(../img/fire_desktop.jpg);
+  }
+  #frame_1_fire .icons {
+    bottom: 5rem;
+    right: 5rem;
+  }
+  #frame_1_fire .support {
+    width: 15vh;
+    height: auto;
+    bottom: 40vh;
+    left: auto;
+    right: 10vw;
   }
 }
 
