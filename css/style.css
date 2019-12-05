@@ -5,6 +5,7 @@
   --theme-blue: #333850;
   --theme-red: #851b22;
   --theme-orange: #ffad43;
+  --theme-light-orange: #ffc882;
   --theme-light-gray: #d5d5d4;
   --theme-light-blue: #53add0;
   --theme-font-color: #211d1d;
@@ -540,8 +541,21 @@ section h3 {
 /* udvikling */
 
 #udvikling {
-  background-color: lightblue;
+  background-color: var(--theme-light-orange);
   min-height: 100vh;
+}
+
+#udvikling .blackbar {
+  margin: 3rem 0 0;
+}
+
+#develop {
+  width: 100vw;
+  padding-bottom: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/workstation_mobile.jpg);
 }
 
 /* bestil */
@@ -579,6 +593,12 @@ footer {
   #frame_1_fire .icons {
     bottom: 6vh;
     right: 6vh;
+  }
+
+  #develop {
+    width: 100vw;
+    padding-bottom: 75%;
+    background-image: url(../img/workstation_tablet.jpg);
   }
 }
 
@@ -674,6 +694,11 @@ footer {
     left: auto;
     right: 10vw;
   }
+
+  #develop {
+    width: 100vw;
+    background-image: url(../img/workstation_desktop.jpg);
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries hd 1920px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -681,5 +706,10 @@ footer {
 @media screen and (min-width: 1366px) {
   #frame_1_fire {
     background-image: url(../img/fire_desktop.jpg);
+  }
+  #develop {
+    width: 100vw;
+    padding-bottom: 75%;
+    background-image: url(../img/workstation_hd.jpg);
   }
 }
