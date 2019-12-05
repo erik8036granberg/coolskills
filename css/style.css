@@ -315,7 +315,7 @@ main {
   margin: 100vh 0 0 0;
 }
 
-main .more {
+main .more_wrapper {
   position: absolute;
   top: -16vh;
   left: 50%;
@@ -324,6 +324,15 @@ main .more {
   font-size: 1.3rem;
   cursor: pointer;
   z-index: 999;
+}
+
+main .more {
+  transition: 0.5s;
+  -moz-transform-origin: center center;
+}
+
+main .more:hover {
+  transform: scale(1.2);
 }
 
 main .more::after {
