@@ -118,7 +118,7 @@ h4 {
 
 #logo {
   position: absolute;
-  top: 2vh;
+  top: 0.75rem;
   left: 6vw;
   width: 12rem;
   margin: 0 1rem 0 0;
@@ -250,14 +250,18 @@ nav.in {
 
 /* splash */
 
-#start {
+#splash {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: grid;
   z-index: 0;
+}
+
+#splash .slide {
+  width: 100%;
+  height: 100%;
 }
 
 #frame_1_fire {
@@ -271,10 +275,35 @@ nav.in {
 }
 
 #frame_1_fire h1 {
-  font-size: 3rem;
-  line-height: 2.5rem;
+  font-size: 8vh;
+  line-height: 7vh;
   max-width: 70vw;
   margin: 0 0 20vh;
+}
+
+#frame_1_fire .support {
+  position: absolute;
+  width: 15vh;
+  height: auto;
+  bottom: 18vh;
+  left: 15vw;
+}
+
+#frame_1_fire .icons {
+  position: absolute;
+  bottom: 4vh;
+  right: 3vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+#frame_1_fire .icons img {
+  border: solid 2px #000;
+  border-radius: 50%;
+  width: 6vh;
+  height: 6vh;
+  margin: 0 0 0.5rem 0;
 }
 
 /* main */
@@ -293,6 +322,8 @@ main .more {
   transform: translateX(-50%);
   font-family: "Bebas Neue", cursive;
   font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 999;
 }
 
 main .more::after {
@@ -307,13 +338,6 @@ main .more::after {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/symbol-down-arrow.svg);
-}
-
-main .icons {
-  display: none;
-  position: absolute;
-  bottom: 5rem;
-  right: 5rem;
 }
 
 /* sections */
@@ -408,6 +432,19 @@ footer {
 
   nav ul li::before {
     display: none;
+  }
+
+  #frame_1_fire .icons {
+    flex-direction: row;
+  }
+
+  #frame_1_fire .icons img {
+    border: solid 2px #000;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 0 0 1rem;
+    transition: 0.5s;
   }
 }
 

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", event => {
   navMenu();
   scrolledMenu();
   logo.addEventListener("click", () => {
-    window.location = "index.html#start";
+    window.location = "index.html#top";
   });
 });
 
