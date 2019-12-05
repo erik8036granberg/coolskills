@@ -89,11 +89,6 @@ h6 {
   font-family: "Bebas Neue", cursive;
 }
 
-.vertical_header {
-  font-family: "TequilaSunset-Regular";
-  font-size: 3.5rem;
-}
-
 h1 {
   font-size: 3.5rem;
   line-height: 4.5rem;
@@ -354,12 +349,31 @@ main .more::after {
 section {
   background-color: var(--theme-light-gray);
   min-height: 100vh;
+  position: relative;
+}
+
+.vertical_header {
+}
+
+section h2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(90deg) translate(120%, 100%);
+  transform-origin: right bottom;
+  font-family: "TequilaSunset-Regular";
+  color: var(--theme-black);
+  font-size: 2.5rem;
+  padding: 0;
+  line-height: 1.4rem;
+  opacity: 0.2;
 }
 
 /* koncept */
 
 #koncept {
-  background-color: lightgreen;
+  position: relative;
+  background-color: var(--theme-light-gray);
   min-height: 100vh;
 }
 
@@ -454,6 +468,13 @@ footer {
     height: 4rem;
     margin: 0 0 0 1rem;
     transition: 0.5s;
+  }
+
+  section h2 {
+    color: var(--theme-black);
+    font-size: 3.5rem;
+    line-height: 2rem;
+    opacity: 0.3;
   }
 }
 
