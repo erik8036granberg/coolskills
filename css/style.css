@@ -549,13 +549,31 @@ section h3 {
   margin: 3rem 0 0;
 }
 
-#develop {
+.development_wrapper {
+  position: relative;
+}
+
+#develop_image {
   width: 100vw;
   padding-bottom: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/workstation_mobile.jpg);
+}
+
+.development_wrapper::after {
+  content: "";
+  width: 100vw;
+  height: 0rem;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  z-index: 100;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-image: url(../img/development_slope_mobile.svg);
 }
 
 /* bestil */
@@ -595,7 +613,7 @@ footer {
     right: 6vh;
   }
 
-  #develop {
+  #develop_image {
     width: 100vw;
     padding-bottom: 75%;
     background-image: url(../img/workstation_tablet.jpg);
@@ -695,7 +713,7 @@ footer {
     right: 10vw;
   }
 
-  #develop {
+  #develop_image {
     width: 100vw;
     background-image: url(../img/workstation_desktop.jpg);
   }
@@ -707,7 +725,7 @@ footer {
   #frame_1_fire {
     background-image: url(../img/fire_desktop.jpg);
   }
-  #develop {
+  #develop_image {
     width: 100vw;
     padding-bottom: 75%;
     background-image: url(../img/workstation_hd.jpg);
