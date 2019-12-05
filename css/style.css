@@ -1,6 +1,7 @@
 /* colors */
 :root {
   --theme-black: #101010;
+  --theme-black-alpha: #101010b6;
   --theme-blue: #333850;
   --theme-red: #851b22;
   --theme-orange: #ffad43;
@@ -397,7 +398,8 @@ section h3 {
 
 /* koncept */
 
-#koncept {
+#koncept,
+#koncept_explainer {
   position: relative;
   background-color: var(--theme-light-gray);
   min-height: 100vh;
@@ -428,6 +430,11 @@ section h3 {
   padding: 7rem 0 7rem;
   background-color: var(--theme-blue);
   position: relative;
+}
+
+#features h4 {
+  color: var(--theme-orange);
+  margin: 0 0 2rem;
 }
 
 #features::before {
@@ -465,10 +472,9 @@ section h3 {
   transition: 0.3s ease-out;
   margin: 0;
   position: relative;
-  /* list-style-type: disc; */
   list-style-position: outside;
   z-index: 100;
-  padding: 0 0 0 2.5rem;
+  padding: 0 3rem 0 2.5rem;
 }
 
 #features ul li {
@@ -497,10 +503,38 @@ section h3 {
 
 #features #arm {
   position: absolute;
-  right: -20vw;
+  right: -32vw;
   bottom: 0;
   max-width: 80vw;
   z-index: 200;
+}
+
+.explainer_img.top {
+  padding: 0 20% 3%;
+}
+
+.explainer_img {
+  padding: 15% 20% 3%;
+}
+
+#koncept_explainer .intro {
+  color: var(--theme-blue);
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.explainer .content {
+  background-color: var(--theme-red);
+}
+
+.explainer .content h4 {
+  color: var(--theme-orange);
+}
+
+#koncept_explainer .explainer .content p {
+  color: var(--theme-light-gray);
+  padding: 0;
 }
 
 /* udvikling */
