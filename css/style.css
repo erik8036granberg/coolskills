@@ -251,7 +251,7 @@ nav.in {
 /* splash */
 
 #start {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -265,6 +265,16 @@ nav.in {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#frame_1_fire h1 {
+  font-size: 3rem;
+  line-height: 2.5rem;
+  max-width: 70vw;
+  margin: 0 0 20vh;
 }
 
 /* main */
@@ -276,7 +286,37 @@ main {
   margin: 100vh 0 0 0;
 }
 
-/* main */
+main .more {
+  position: absolute;
+  top: -16vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.3rem;
+}
+
+main .more::after {
+  position: absolute;
+  content: "";
+  top: 5vh;
+  left: 50%;
+  height: 1.75rem;
+  width: 1.75rem;
+  transform: translateX(-50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/symbol-down-arrow.svg);
+}
+
+main .icons {
+  display: none;
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+/* sections */
 
 section {
   background-color: var(--theme-light-gray);
