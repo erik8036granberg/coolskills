@@ -607,38 +607,86 @@ section h3 {
 }
 
 .accordion {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  padding: 1rem;
+  padding: 5vw 7vw 5vw;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
   transition: 0.5s;
+  position: relative;
+  transition: 0.6s ease;
 }
 
 .accordion:after {
-  content: "\02795";
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%) rotate(0);
+  transform-origin: center center;
+  width: 0.8rem;
+  height: 1.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/symbol-more-arrow.svg);
+  transition: 0.5s;
 }
 
 .accordion.active:after {
-  content: "\2796";
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion img {
+  border: solid 2px #000;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.accordion h5 {
+  align-items: center;
+  font-size: 1.75rem;
+  line-height: 3rem;
+  color: var(--theme-font-color);
+  margin: 0 0 0 1rem;
 }
 
 .panel {
-  padding: 0 1rem 0;
   max-height: 0;
   overflow: hidden;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease;
   opacity: 0;
+}
+
+.panel p {
+  opacity: 0;
+  transform: translateX(-100vw);
 }
 
 .panel.show {
   opacity: 1;
-  max-height: 30rem;
+  max-height: 100rem;
+}
+
+.panel.show p {
+  animation: slide 0.5s forwards ease-in-out;
+  margin: 0 8vw 2rem;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* bestil */
