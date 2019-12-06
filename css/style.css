@@ -385,6 +385,7 @@ section h3 {
 
 .content {
   padding: 2rem;
+  transition: 0.5s;
 }
 
 .content p,
@@ -803,9 +804,40 @@ section h3 {
 footer {
   background-color: var(--theme-black);
   color: #fff;
-  min-height: 100vh;
   position: relative;
   z-index: 250;
+  color: var(--theme-light-gray);
+}
+
+footer .content {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 3rem 3rem 10rem;
+}
+
+footer .logo {
+  max-width: 15rem;
+  margin: 0 0 1rem;
+}
+
+footer .some {
+  width: 12rem;
+  margin: 1rem auto 1rem 0;
+  display: inline-block;
+}
+
+footer .share_wrapper {
+  display: flex;
+  margin: 0.5rem 0 0;
+}
+
+footer .share_projekt {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+footer .support {
+  width: 5rem;
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries mobile landscape- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -819,6 +851,10 @@ footer {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries tablet portrait 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 500px) {
+  .content {
+    padding: 3rem;
+  }
+
   #frame_1_fire {
     background-image: url(../img/fire_tablet_portrait.jpg);
   }
