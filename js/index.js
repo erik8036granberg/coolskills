@@ -17,6 +17,7 @@ function links() {
 }
 
 function accordion() {
+  // w3schools Collapsibles/Accordion
   var acc = document.getElementsByClassName("accordion");
   var i;
 
