@@ -6,6 +6,7 @@
   --theme-red: #851b22;
   --theme-orange: #ffad43;
   --theme-light-orange: #ffc882;
+  --theme-light-orange-2: #ffd6a2;
   --theme-light-gray: #d5d5d4;
   --theme-light-blue: #53add0;
   --theme-font-color: #211d1d;
@@ -403,7 +404,6 @@ section h3 {
 #koncept_explainer {
   position: relative;
   background-color: var(--theme-light-gray);
-  min-height: 100vh;
 }
 
 .try_figure,
@@ -542,9 +542,13 @@ section h3 {
 
 /* udvikling */
 
-#udvikling {
+#udvikling,
+#udvikling_how {
   background-color: var(--theme-light-orange);
-  min-height: 100vh;
+}
+
+#udvikling_how > h2 {
+  transform: rotate(90deg) translate(120%, 100%);
 }
 
 #udvikling .blackbar {
@@ -560,6 +564,7 @@ section h3 {
 
 #develop_image {
   width: 100%;
+  margin: -1px 0 0;
   padding-bottom: 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -582,8 +587,58 @@ section h3 {
   transition: 0.5s;
 }
 
-#udvikling h2 {
-  margin: 50vw 0 0;
+#udvikling_how ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+#udvikling_how .development_explainer {
+  padding: 3rem;
+}
+
+/* accordion */
+
+.accordion_wrapper:nth-child(odd) {
+  background-color: var(--theme-light-orange-2);
+}
+
+.accordion_wrapper:nth-child(even) {
+  background-color: var(--theme-light-orange);
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.5s;
+}
+
+.accordion:after {
+  content: "\02795";
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2796";
+}
+
+.panel {
+  padding: 0 1rem 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+}
+
+.panel.show {
+  opacity: 1;
+  max-height: 30rem;
 }
 
 /* bestil */
