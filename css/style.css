@@ -657,7 +657,7 @@ section > h2 {
   margin: 0 0 0.5rem 0;
 }
 
-.accordion h5 {
+.mobile .accordion h5 {
   align-items: center;
   font-size: 1.75rem;
   line-height: 2rem;
@@ -685,6 +685,13 @@ section > h2 {
 .mobile .panel.show p {
   animation: slide 0.5s forwards ease-in-out;
   margin: 0 2rem 2rem;
+}
+
+.accordion h5 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: var(--theme-font-color);
+  margin: 0;
 }
 
 @keyframes slide {
