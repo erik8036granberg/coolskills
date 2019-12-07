@@ -17,14 +17,23 @@ function links() {
 }
 
 function accordion() {
-  // w3schools Collapsibles/Accordion
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+  // based on w3schools Collapsibles/Accordion
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-      this.classList.toggle("active");
-      this.nextElementSibling.classList.toggle("show");
-    };
+  if (window.innerWidth < 800) {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+      };
+    }
+
+    //discard mobile accordion styles
+    document.querySelector(".technologies").classList.add("mobile");
+  } else {
+    document.querySelector(".technologies").classList.remove("mobile");
+    document.querySelector(".technologies").classList.add("content");
   }
 }
