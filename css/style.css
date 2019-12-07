@@ -705,6 +705,7 @@ section > h2 {
   display: block;
   position: relative;
   background-color: var(--theme-orange);
+  z-index: 10;
 }
 
 #bestil .graffiti {
@@ -719,7 +720,7 @@ section > h2 {
   background-repeat: no-repeat;
   background-position: center center;
   opacity: 0.07;
-  z-index: 50;
+  z-index: -1;
 }
 
 #bestil .content {
@@ -797,6 +798,13 @@ section > h2 {
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
+  cursor: pointer;
+}
+
+#bestil .indiegogo_link:hover {
+  transform: scale(1.1);
+  background-color: var(--theme-blue);
+  color: var(--theme-light-orange);
 }
 
 #bestil .indigogo_facts {
@@ -986,7 +994,6 @@ footer .support {
   }
 
   nav ul {
-    color: #fff;
     font-family: "Bebas Neue", cursive;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -998,6 +1005,44 @@ footer .support {
   nav ul li {
     display: inline-block;
     margin: 0 1.5rem 0 0;
+  }
+
+  nav ul li a {
+    position: relative;
+    transition: 0.5s;
+  }
+
+  nav ul li a,
+  nav ul li a:link,
+  nav ul li a:active,
+  nav ul li a:visited {
+    color: var(--theme-light-gray);
+  }
+
+  nav ul li a:hover {
+    color: #fff;
+  }
+
+  nav ul li a::after {
+    display: block;
+    content: "";
+    width: 2px;
+    height: 3px;
+    background: var(--theme-orange);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  nav ul li a:hover:after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  nav ul li a::after {
+    height: 1px;
   }
 
   nav ul li::before {
