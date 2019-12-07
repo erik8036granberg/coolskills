@@ -815,14 +815,24 @@ footer .content {
   padding: 3rem 3rem 10rem;
 }
 
+footer .content p,
+footer .content h4 {
+  padding: 0 5vw 0 0;
+}
+
 footer .logo {
   max-width: 15rem;
   margin: 0 0 1rem;
 }
 
+.symbol_wrapper {
+  display: grid;
+  grid-gap: 2rem;
+}
+
 footer .some {
   width: 12rem;
-  margin: 1rem auto 1rem 0;
+  margin: 1rem auto 0 0;
   display: inline-block;
 }
 
@@ -848,15 +858,11 @@ footer .support {
   }
 }
 
-/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries tablet portrait 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 500px) {
   .content {
     padding: 3rem;
-  }
-
-  #frame_1_fire {
-    background-image: url(../img/fire_tablet_portrait.jpg);
   }
 
   #frame_1_fire .icons {
@@ -867,6 +873,28 @@ footer .support {
   #develop_image {
     padding-bottom: 55.5%;
     background-image: url(../img/workstation_tablet.jpg);
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries tablet portrait over 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 500px) and (portrait: landscape) {
+  #frame_1_fire {
+    background-image: url(../img/fire_tablet_portrait.jpg);
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 600px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media screen and (min-width: 600px) {
+  footer .content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .symbol_wrapper {
+    grid-column: 2;
+  }
+  .symbol_wrapper {
+    grid-row: 1;
   }
 }
 
@@ -931,6 +959,24 @@ footer .support {
     line-height: 2rem;
     opacity: 0.3;
   }
+
+  footer .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media only screen and (min-width: 1080px) {
+  footer .content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .symbol_wrapper {
+    grid-column: 2;
+  }
+  .symbol_wrapper {
+    grid-row: 1;
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px tablet landscape- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -938,6 +984,22 @@ footer .support {
 @media only screen and (max-width: 1080px) and (orientation: landscape) {
   #frame_1_fire {
     background-image: url(../img/fire_tablet_landscape.jpg);
+  }
+
+  #frame_1_fire .support {
+    width: 15vh;
+    height: auto;
+    bottom: 40vh;
+    left: auto;
+    right: 10vw;
+  }
+}
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px tablet portrait- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
+@media only screen and (max-width: 1080px) and (orientation: portrait) {
+  #frame_1_fire {
+    background-image: url(../img/fire_tablet_portrait.jpg);
   }
 
   #frame_1_fire .support {
