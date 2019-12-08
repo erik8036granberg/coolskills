@@ -1,0 +1,19 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="67.5" height="210" viewBox="0 0 67.5 210">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #851b22;
+      }
+    </style>
+  </defs>
+  <title>explainer_numbers_1</title>
+  <g id="_1" data-name=" 1" class="cls-1">
+    <g class="cls-1">
+      <path class="cls-2" d="M229.68,184.22h-34.5v-23.4q14.1,0,22.65-2.4a28.49,28.49,0,0,0,13.65-7.95q5.1-5.55,9-16.05h22.2v210h-33Z" transform="translate(-195.18 -134.42)"/>
+    </g>
+  </g>
+</svg>

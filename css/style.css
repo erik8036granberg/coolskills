@@ -516,13 +516,7 @@ section > h2 {
   z-index: 200;
 }
 
-.explainer_img.top {
-  padding: 0 20% 3%;
-}
-
-.explainer_img {
-  padding: 15% 20% 3%;
-}
+/* explainer images */
 
 #koncept_explainer .intro {
   color: var(--theme-blue);
@@ -531,17 +525,69 @@ section > h2 {
   line-height: 2rem;
 }
 
-.explainer .content {
+#koncept_explainer .explainer_img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding: 15% 10% 0;
+}
+
+#koncept_explainer .explainer_img img {
+  align-self: flex-end;
+  position: relative;
+  bottom: -1rem;
+}
+
+#koncept_explainer .number {
+  padding: 0 3vw 0 0;
+  height: 12rem;
+  min-height: 12rem;
+  width: auto;
+}
+
+#koncept_explainer .billede {
+  height: 20rem;
+  min-height: 20rem;
+  width: auto;
+}
+
+#koncept_explainer .box {
   background-color: var(--theme-red);
+  padding: 2rem;
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  transition: none;
 }
 
-.explainer .content h4 {
+#koncept_explainer .box h4 {
   color: var(--theme-orange);
+  font-size: 1.75rem;
 }
 
-#koncept_explainer .explainer .content p {
+#koncept_explainer .box p {
   color: var(--theme-light-gray);
   padding: 0;
+}
+
+#koncept_explainer .box::after {
+  content: "";
+  position: absolute;
+  height: 82px;
+  width: 100vw;
+  bottom: -80px;
+  left: 0;
+  background-size: 1920px 80px;
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-image: url(../img/rugged_line_explainer.svg);
+  transition: none;
+}
+
+#koncept_explainer .content {
+  display: grid;
+  grid: ;
 }
 
 /* udvikling */
@@ -1244,6 +1290,11 @@ footer .support {
   .content {
     padding: 3rem;
   }
+
+  #udvikling_how .technologies.content {
+    padding: 3rem 3rem 6rem;
+  }
+
   #udvikling_how .technologies.content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 4vw;
@@ -1257,14 +1308,14 @@ footer .support {
     background-image: url(../img/fire_desktop.jpg);
   }
 
-  #bestil .graffiti {
-    background-image: url(../img/graffiti_desktop.jpg);
-  }
-
   #udvikling_how .develop_background {
     background-image: url(../img/develop_desktop.png);
     width: 60%;
     margin: 0 50% 0 10%;
+  }
+
+  #bestil .graffiti {
+    background-image: url(../img/graffiti_desktop.jpg);
   }
 }
 
@@ -1311,9 +1362,6 @@ footer .support {
   #udvikling_how .development_text p {
     max-width: 85%;
   }
-  #udvikling_how .technologies.content {
-    padding: 3rem 3rem 6rem;
-  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1366px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -1325,12 +1373,9 @@ footer .support {
     width: 60%;
     margin: 0 60% 0 0%;
   }
+
   #bestil .graffiti {
     background-image: url(../img/graffiti_desktop.jpg);
-  }
-  #udvikling #develop_image {
-    padding-bottom: 45.2%;
-    background-image: url(../img/workstation_desktop.jpg);
   }
 
   #frame_1_fire .support {
@@ -1373,10 +1418,6 @@ footer .support {
   #udvikling #develop_image {
     padding-bottom: 45.2%;
     background-image: url(../img/workstation_hd.jpg);
-  }
-  #udvikling_how .develop_background {
-    padding-bottom: 45.2%;
-    background-image: url(../img/develop_hd.png);
   }
   #bestil .graffiti {
     background-image: url(../img/graffiti_hd.jpg);
