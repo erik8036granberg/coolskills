@@ -518,47 +518,22 @@ section > h2 {
 
 /* explainer images */
 
-#koncept_explainer .intro {
-  color: var(--theme-blue);
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.25rem;
-  line-height: 2rem;
+#koncept_explainer .content {
+  display: grid;
 }
 
-#koncept_explainer .explainer_img {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-  padding: 15% 10% 0;
+#koncept_explainer .image_wrapper {
+  line-height: 0;
 }
 
-#koncept_explainer .explainer_img img {
-  align-self: flex-end;
-  position: relative;
-  bottom: -1rem;
-}
-
-#koncept_explainer .number {
-  padding: 0 3vw 0 0;
-  height: 12rem;
-  min-height: 12rem;
-  width: auto;
-}
-
-#koncept_explainer .billede {
-  height: 20rem;
-  min-height: 20rem;
-  width: auto;
+#koncept_explainer .how_wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 #koncept_explainer .box {
   background-color: var(--theme-red);
   padding: 2rem;
-  position: relative;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  transition: none;
 }
 
 #koncept_explainer .box h4 {
@@ -571,7 +546,43 @@ section > h2 {
   padding: 0;
 }
 
-#koncept_explainer .box::after {
+/* #koncept_explainer .explainer_img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  padding: 15% 10% 0;
+  margin: 5rem 0 0;
+  height: 20rem;
+}
+
+#koncept_explainer .explainer_img img {
+  position: relative;
+  bottom: -0.25rem;
+}
+
+#koncept_explainer .number {
+  padding: 0 3vw 0 0;
+  max-height: 12rem !important;
+  width: auto;
+}
+
+#koncept_explainer .billede {
+  max-height: 20rem !important;
+  width: auto;
+}
+
+#koncept_explainer .box {
+  background-color: var(--theme-red);
+  padding: 2rem;
+  position: relative;
+  /* margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw); */
+/* transition: none;
+  height: auto;
+} */
+
+/* #koncept_explainer .box::after {
   content: "";
   position: absolute;
   height: 82px;
@@ -583,11 +594,14 @@ section > h2 {
   background-position: top center;
   background-image: url(../img/rugged_line_explainer.svg);
   transition: none;
-}
+} */
 
 #koncept_explainer .content {
   display: grid;
-  grid: ;
+}
+
+#koncept_explainer .content h4 {
+  grid-column: 1 / -1;
 }
 
 /* udvikling */
@@ -1177,6 +1191,10 @@ footer .support {
     font-size: 3.5rem;
     line-height: 2rem;
     opacity: 0.3;
+  }
+
+  #koncept_explainer .content {
+    grid-template-columns: 1fr 1fr;
   }
 
   #udvikling_how .content {
