@@ -3,13 +3,14 @@
   --theme-black: #101010;
   --theme-black-alpha: #101010b6;
   --theme-blue: #333850;
+  --theme-medium-blue: #717485;
+  --theme-light-blue: #adafb9;
   --theme-red: #851b22;
   --theme-orange: #ffad43;
   --theme-light-orange: #ffc882;
   --theme-light-orange-2: #ffd6a2;
   --theme-light-gray: #d5d5d4;
   --theme-medium-gray: #7e7e7e;
-  --theme-light-blue: #53add0;
   --theme-font-color: #211d1d;
 }
 
@@ -125,7 +126,7 @@ p {
 
 /* nav */
 
-#logo {
+nav #logo {
   position: absolute;
   top: 0.75rem;
   left: 6vw;
@@ -135,7 +136,7 @@ p {
   transition: 0.5s ease-in;
 }
 
-#logo.fadeout {
+nav #logo.fadeout {
   opacity: 0;
   pointer-events: none;
 }
@@ -302,7 +303,7 @@ nav.in {
   position: absolute;
   bottom: 6vh;
   right: 4vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   z-index: 999;
 }
@@ -547,25 +548,42 @@ section > h2 {
 
 #udvikling,
 #udvikling_how {
-  background-color: var(--theme-light-orange);
-}
-
-#udvikling_how > h2 {
-  transform: rotate(90deg) translate(120%, 100%);
+  background-color: var(--theme-blue);
+  color: var(--theme-light-blue);
 }
 
 #udvikling .blackbar {
   margin: 3rem 0 0;
 }
 
-.development_wrapper {
+#udvikling_how > h2 {
+  transform: rotate(90deg) translate(120%, 100%);
+  color: var(--theme-light-blue);
+}
+
+#udvikling_how h4 {
+  color: var(--theme-orange);
+  padding: 0;
+}
+
+#udvikling_how .development_explainer {
+  max-width: 80%;
+}
+
+#udvikling_how .content {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+#udvikling .development_wrapper {
+  background-color: var(--theme-light-blue);
   position: relative;
   line-height: 0;
   margin: 0;
   padding: 0;
 }
 
-#develop_image {
+#udvikling #develop_image {
   width: 100%;
   margin: -1px 0 -1px;
   padding-bottom: 100%;
@@ -575,7 +593,7 @@ section > h2 {
   background-image: url(../img/workstation_mobile.jpg);
 }
 
-.development_wrapper::after {
+#udvikling .development_wrapper::after {
   content: "";
   width: 103%;
   height: 13vw;
@@ -591,30 +609,36 @@ section > h2 {
 }
 
 #udvikling_how ul {
-  list-style-type: disc;
-  list-style-position: outside;
-  margin-left: 0.75em;
+  list-style: none;
+  margin: 0 0 0 1rem;
 }
 
-#udvikling_how ul li {
-  padding-left: 1rem;
-}
-
-#udvikling_how .development_explainer {
-  padding: 3rem;
+#udvikling_how ul li::before {
+  content: "\2022";
+  color: var(--theme-orange);
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+  padding-left: -1rem;
 }
 
 /* accordion */
 
-.mobile .accordion_wrapper:nth-child(odd) {
-  background-color: var(--theme-light-orange-2);
+#udvikling_how .mobile .accordion_wrapper:nth-child(odd) {
+  background-color: var(--theme-medium-blue);
+  color: var(--theme-blue);
 }
 
-.mobile .accordion_wrapper:nth-child(even) {
-  background-color: var(--theme-light-orange);
+#udvikling_how .mobile .accordion_wrapper:nth-child(odd) p {
+  font-weight: bold;
 }
 
-.mobile .accordion {
+#udvikling_how .mobile .accordion_wrapper:nth-child(even) {
+  background-color: var(--theme-blue);
+  color: var(--theme-light-blue);
+}
+
+#udvikling_how .mobile .accordion {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -628,7 +652,7 @@ section > h2 {
   transition: 0.6s ease;
 }
 
-.mobile .accordion:after {
+#udvikling_how .mobile .accordion:after {
   position: absolute;
   content: "";
   top: 50%;
@@ -640,16 +664,16 @@ section > h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(../img/symbol-more-arrow.svg);
+  background-image: url(../img/symbol-more-arrow-light-blue.svg);
   transition: 0.5s;
 }
 
-.mobile .accordion.active:after {
+#udvikling_how .mobile .accordion.active:after {
   transform: translateY(-50%) rotate(90deg);
 }
 
-.accordion img {
-  border: solid 2px #000;
+#udvikling_how .accordion img {
+  border: solid 2px var(--theme-light-blue);
   border-radius: 50%;
   width: 5rem;
   min-width: 5rem;
@@ -657,37 +681,37 @@ section > h2 {
   margin: 0 0 0.5rem 0;
 }
 
-.mobile .accordion h5 {
+#udvikling_how .mobile .accordion h5 {
   align-items: center;
   font-size: 1.75rem;
   line-height: 2rem;
-  color: var(--theme-font-color);
+  color: var(--theme-light-blue);
   margin: 0 0 0 1rem;
 }
 
-.mobile .panel {
+#udvikling_how .mobile .panel {
   max-height: 0;
   overflow: hidden;
   transition: 0.6s ease;
   opacity: 0;
 }
 
-.mobile .panel p {
+#udvikling_how .mobile .panel p {
   opacity: 0;
   transform: translateX(-100vw);
 }
 
-.mobile .panel.show {
+#udvikling_how .mobile .panel.show {
   opacity: 1;
   max-height: 100rem;
 }
 
-.mobile .panel.show p {
+#udvikling_how .mobile .panel.show p {
   animation: slide 0.5s forwards ease-in-out;
-  margin: 0 2rem 2rem;
+  margin: 0 7vw 2rem;
 }
 
-.accordion h5 {
+#udvikling_how .accordion h5 {
   font-size: 1.75rem;
   line-height: 2rem;
   color: var(--theme-font-color);
@@ -703,6 +727,21 @@ section > h2 {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+#udvikling_how .develop_background {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/graffiti_mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  opacity: 0.07;
+  z-index: -1;
 }
 
 /* bestil */
@@ -823,7 +862,7 @@ section > h2 {
 #bestil .indigogo_facts ul {
   list-style-type: disc;
   list-style-position: outside;
-  margin-left: 0.75em;
+  margin-left: 1em;
 }
 
 #bestil .indigogo_facts ul li {
@@ -921,9 +960,13 @@ footer .support {
     right: 6vh;
   }
 
-  #develop_image {
+  #udvikling #develop_image {
     padding-bottom: 55.5%;
     background-image: url(../img/workstation_tablet.jpg);
+  }
+
+  #udvikling_how .development_explainer {
+    max-width: 60%;
   }
 
   #bestil .graffiti {
@@ -1057,6 +1100,7 @@ footer .support {
   }
 
   #frame_1_fire .icons {
+    display: flex;
     flex-direction: row;
     bottom: 6vh;
     right: 6vh;
@@ -1076,6 +1120,45 @@ footer .support {
     font-size: 3.5rem;
     line-height: 2rem;
     opacity: 0.3;
+  }
+
+  #udvikling_how .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 3rem 0 3rem;
+  }
+
+  #udvikling_how .content p {
+    padding: 0 0 0 0;
+  }
+
+  #udvikling_how .acccordian_header {
+    grid-column: 1 / -1;
+  }
+
+  #udvikling_how .content {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-gap: 3rem;
+  }
+
+  #udvikling_how .development_explainer {
+    max-width: 70%;
+  }
+
+  #udvikling_how .technologies.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    padding: 3rem;
+  }
+
+  #udvikling_how .technologies.content h5 {
+    color: var(--theme-light-blue);
+  }
+
+  #udvikling_how .technologies.content p {
+    max-width: 85%;
   }
 
   #bestil .content {
@@ -1154,6 +1237,14 @@ footer .support {
   .content {
     padding: 3rem;
   }
+  #udvikling_how .technologies.content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 4vw;
+  }
+
+  #udvikling_how .technologies.content p {
+    max-width: 100%;
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px tablet landscape- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -1196,6 +1287,9 @@ footer .support {
     margin-left: 7vw;
     margin-right: 7vw;
   }
+  #udvikling_how .development_text p {
+    max-width: 85%;
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1366px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -1218,7 +1312,7 @@ footer .support {
     margin-right: 15vw;
   }
 
-  #develop_image {
+  #udvikling #develop_image {
     padding-bottom: 56.22%;
     background-image: url(../img/workstation_desktop.jpg);
   }
@@ -1250,7 +1344,7 @@ footer .support {
   #frame_1_fire {
     background-image: url(../img/fire_hd_desktop.jpg);
   }
-  #develop_image {
+  #udvikling #develop_image {
     padding-bottom: 45.2%;
     background-image: url(../img/workstation_hd.jpg);
   }
