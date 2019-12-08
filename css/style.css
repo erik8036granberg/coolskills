@@ -550,6 +550,8 @@ section > h2 {
 #udvikling_how {
   background-color: var(--theme-blue);
   color: var(--theme-light-blue);
+  position: relative;
+  z-index: 10;
 }
 
 #udvikling .blackbar {
@@ -573,6 +575,7 @@ section > h2 {
 #udvikling_how .content {
   display: grid;
   grid-gap: 2rem;
+  z-index: 100;
 }
 
 #udvikling .development_wrapper {
@@ -734,13 +737,15 @@ section > h2 {
   content: "";
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/graffiti_mobile.jpg);
-  background-size: cover;
+  width: 80%;
+  margin: 0 20% 5% 5%;
+  height: auto;
+  padding-bottom: 100%;
+  background-image: url(../img/develop_mobile.png);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
-  opacity: 0.07;
+  opacity: 0.03;
   z-index: -1;
 }
 
@@ -960,17 +965,8 @@ footer .support {
     right: 6vh;
   }
 
-  #udvikling #develop_image {
-    padding-bottom: 55.5%;
-    background-image: url(../img/workstation_tablet.jpg);
-  }
-
   #udvikling_how .development_explainer {
     max-width: 60%;
-  }
-
-  #bestil .graffiti {
-    background-image: url(../img/graffiti_tablet.jpg);
   }
 
   footer .content {
@@ -1009,6 +1005,21 @@ footer .support {
     grid-row: 1;
     padding: 1.25rem 0 0;
     grid-template-columns: 1fr;
+  }
+
+  #udvikling #develop_image {
+    padding-bottom: 55.5%;
+    background-image: url(../img/workstation_tablet.jpg);
+  }
+
+  #udvikling_how .develop_background {
+    background-image: url(../img/develop_tablet.png);
+    width: 75%;
+    margin: 0 25% 5% 5%;
+  }
+
+  #bestil .graffiti {
+    background-image: url(../img/graffiti_tablet.jpg);
   }
 
   #bestil .indiegogo_link,
@@ -1200,10 +1211,6 @@ footer .support {
     margin: -1px 0 -1rem;
   }
 
-  #bestil .graffiti {
-    background-image: url(../img/graffiti_desktop.jpg);
-  }
-
   footer .content {
     grid-template-columns: auto 1fr 25%;
   }
@@ -1244,6 +1251,20 @@ footer .support {
 
   #udvikling_how .technologies.content p {
     max-width: 100%;
+  }
+
+  #frame_1_fire {
+    background-image: url(../img/fire_desktop.jpg);
+  }
+
+  #bestil .graffiti {
+    background-image: url(../img/graffiti_desktop.jpg);
+  }
+
+  #udvikling_how .develop_background {
+    background-image: url(../img/develop_desktop.png);
+    width: 60%;
+    margin: 0 50% 0 10%;
   }
 }
 
@@ -1290,14 +1311,28 @@ footer .support {
   #udvikling_how .development_text p {
     max-width: 85%;
   }
+  #udvikling_how .technologies.content {
+    padding: 3rem 3rem 6rem;
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1366px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 1366px) {
-  #frame_1_fire {
-    background-image: url(../img/fire_desktop.jpg);
+  #udvikling_how .develop_background {
+    padding-bottom: 45.2%;
+    background-image: url(../img/develop_desktop.png);
+    width: 60%;
+    margin: 0 60% 0 0%;
   }
+  #bestil .graffiti {
+    background-image: url(../img/graffiti_desktop.jpg);
+  }
+  #udvikling #develop_image {
+    padding-bottom: 45.2%;
+    background-image: url(../img/workstation_desktop.jpg);
+  }
+
   #frame_1_fire .support {
     width: 15vh;
     height: auto;
@@ -1310,15 +1345,6 @@ footer .support {
   .blackbar h3 {
     margin-left: 15vw;
     margin-right: 15vw;
-  }
-
-  #udvikling #develop_image {
-    padding-bottom: 56.22%;
-    background-image: url(../img/workstation_desktop.jpg);
-  }
-
-  #bestil .graffiti {
-    background-image: url(../img/graffiti_hd.jpg);
   }
 
   footer .content {
@@ -1347,5 +1373,12 @@ footer .support {
   #udvikling #develop_image {
     padding-bottom: 45.2%;
     background-image: url(../img/workstation_hd.jpg);
+  }
+  #udvikling_how .develop_background {
+    padding-bottom: 45.2%;
+    background-image: url(../img/develop_hd.png);
+  }
+  #bestil .graffiti {
+    background-image: url(../img/graffiti_hd.jpg);
   }
 }
