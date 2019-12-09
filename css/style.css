@@ -581,14 +581,24 @@ section > h2 {
   z-index: 100;
 }
 
-#koncept_explainer .how_2 img {
+#koncept_explainer .how_2 .image_wrapper img {
   right: -10%;
   bottom: -2rem;
 }
 
-#koncept_explainer .how_3 img {
+#koncept_explainer .how_3 .image_wrapper img {
   right: -10%;
-  bottom: -2rem;
+  bottom: -0.1rem;
+  transform: scale(0.75);
+}
+
+#koncept_explainer .how_5 .image_wrapper img {
+  transform: scale(0.9);
+}
+
+#koncept_explainer .how_6 .image_wrapper img {
+  right: -5%;
+  bottom: -0.15rem;
 }
 
 #koncept_explainer .box {
