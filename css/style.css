@@ -456,26 +456,22 @@ section > h2 {
 #koncept {
   padding: 0 0 15vh;
   z-index: 10;
+  position: relative;
 }
 
 #koncept_try {
   padding: 22vh 0 0;
-  z-index: 10;
-}
-
-#koncept_try .graffiti {
-  transform: scaleX(-1);
 }
 
 #koncept::after {
   content: "";
-  width: 110vw;
-  height: 25vh;
+  width: 110vw !important;
+  height: 25vh !important;
   position: absolute;
   bottom: -1px;
   left: -1vw;
   z-index: 0;
-  background-size: contain;
+  background-size: contain !important;
   background-repeat: no-repeat;
   background-position: bottom right;
   background-image: url(../img/features_slope_top.svg);
@@ -484,13 +480,13 @@ section > h2 {
 
 #koncept_try::before {
   content: "";
-  width: 105vw;
-  height: 25vh;
+  width: 105vw !important;
+  height: 25vh !important;
   position: absolute;
   top: -1px;
   left: -1vw;
   z-index: 0;
-  background-size: contain;
+  background-size: contain !important;
   background-repeat: no-repeat;
   background-position: top right;
   background-image: url(../img/features_slope_bottom.svg);
@@ -507,7 +503,7 @@ section > h2 {
 }
 
 #koncept_features .content_wrapper {
-  padding: 0.5rem 3rem 1rem 0;
+  padding: 0.5rem 0 0.5rem;
 }
 
 #koncept_features h4 {
@@ -567,6 +563,10 @@ section > h2 {
 }
 
 /* koncept feature try */
+
+#koncept_try {
+  position: relative;
+}
 
 #koncept_try .content p {
   padding: 0 0 0 0;
@@ -786,6 +786,7 @@ section > h2 {
   left: 5%;
   width: 5rem;
   height: 9rem;
+  z-index: 500;
 }
 
 /* udvikling */
@@ -834,7 +835,7 @@ section > h2 {
   width: 100%;
   margin: -1px 0 -1px;
   padding-bottom: 100%;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/workstation_mobile.jpg);
@@ -842,13 +843,13 @@ section > h2 {
 
 #udvikling .development_wrapper::after {
   content: "";
-  width: 103%;
-  height: 13vw;
+  width: 103vw !important;
+  height: 13vw !important;
   position: absolute;
   bottom: -1px;
   left: -10px;
   z-index: 100;
-  background-size: contain;
+  background-size: cover !important;
   background-repeat: no-repeat;
   background-position: bottom right;
   background-image: url(../img/development_slope_mobile.svg);
@@ -1014,7 +1015,7 @@ section > h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.05;
+  opacity: 0.06;
   z-index: -10;
 }
 
@@ -1445,6 +1446,7 @@ footer .support {
   #koncept .jump_girl {
     max-width: 80%;
     align-self: center;
+    z-index: 500;
   }
 
   #koncept_features .poster {

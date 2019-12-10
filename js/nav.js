@@ -7,7 +7,6 @@ const logo = document.querySelector("#logo");
 document.addEventListener("DOMContentLoaded", event => {
   navMenu();
   scrolledMenu();
-  aos();
   logo.addEventListener("click", () => {
     window.location = "index.html#top";
   });
@@ -63,15 +62,4 @@ function scrolledMenu() {
       }, 500);
     }
   }
-}
-
-function aos() {
-  setTimeout(function() {
-    let script = document.createElement("script");
-    script.src = "https://unpkg.com/aos@2.3.1/dist/aos.js";
-    document.body.appendChild(script);
-    script.onload = function() {
-      AOS.init();
-    };
-  }, 2000);
 }
