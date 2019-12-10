@@ -45,8 +45,6 @@ svg {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -55,6 +53,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   position: relative;
+  padding: 100vh 0 0;
 }
 
 body div {
@@ -319,10 +318,8 @@ nav.in {
 /* main */
 
 main {
-  background-color: var(--theme-light-gray);
   z-index: 250;
   position: relative;
-  margin: 100vh 0 0 0;
 }
 
 main .more_wrapper {
@@ -404,25 +401,81 @@ section > h2 {
 
 /* koncept */
 
-#koncept_intro {
+#koncept,
+#koncept_try {
   background-color: var(--theme-orange);
   position: relative;
 }
 
-#koncept_intro .content {
+#koncept .content,
+#koncept_try .content {
   display: grid;
   grid-gap: 2rem;
 }
 
-#koncept_features {
-  width: 100%;
-  padding: 7rem 0 7rem;
-  background-color: var(--theme-blue);
-  position: relative;
+#koncept .text_1 {
+  margin: 0 0 -2rem;
 }
 
-#koncept_features h4 {
+#koncept .jump_girl {
+  width: 90%;
+  max-width: 20rem;
+  height: auto;
+}
+
+#koncept {
+  padding: 0 0 15vh;
+}
+
+/* koncept features slopes */
+
+#koncept::after {
+  content: "";
+  width: 110vw;
+  height: 25vh;
+  position: absolute;
+  bottom: -1vw;
+  left: -1vw;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-image: url(../img/features_slope_top.svg);
+  transition: 0.5s;
+}
+
+#koncept_try::before {
+  content: "";
+  width: 105vw;
+  height: 25vh;
+  position: absolute;
+  top: -1vw;
+  left: -1vw;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-image: url(../img/features_slope_bottom.svg);
+  transition: 0.5s;
+}
+
+/* koncept features */
+
+#koncept_features {
+  width: 100%;
+  background-color: var(--theme-blue);
+  position: relative;
+  padding: 0 0 0 7vw;
+}
+
+#koncept_features .content_wrapper {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+#koncept_features .content_wrapper h4 {
   color: var(--theme-orange);
+  font-size: 1.75rem;
   margin: 0 0 2rem;
 }
 
@@ -457,7 +510,26 @@ section > h2 {
   transition: 0.3s ease-out;
 }
 
-/* #features #poster {
+#koncept_features .feature_images {
+  position: relative;
+}
+
+#koncept_features .poster {
+  max-width: 60vw;
+  margin: 1rem 0 0;
+}
+
+#koncept_features .arm {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 70vw;
+  z-index: 200;
+}
+
+/* koncept feature try */
+
+#features #poster {
   max-width: 60vw;
   margin: 1rem 0 0;
 }
@@ -468,37 +540,7 @@ section > h2 {
   bottom: 0;
   max-width: 80vw;
   z-index: 200;
-} */
-
-/* #features::before {
-  content: "";
-  width: 100%;
-  height: 20vw;
-  position: absolute;
-  top: -1px;
-  left: 0;
-  z-index: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-image: url(../img/features_slope_mobile.svg);
-  transition: 0.5s;
 }
-
-#features::after {
-  content: "";
-  width: 100%;
-  height: 20vw;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  z-index: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-image: url(../img/features_slope_mobile_bottom.svg);
-  transition: 0.5s;
-} */
 
 /* koncept explainer */
 
@@ -1099,6 +1141,11 @@ footer .support {
     grid-template-columns: 1fr;
   }
 
+  #koncept .image_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   #koncept_explainer ul {
     display: block;
   }
@@ -1227,6 +1274,24 @@ footer .support {
     font-size: 3.5rem;
     line-height: 2rem;
     opacity: 0.3;
+  }
+
+  #koncept .content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #koncept .subheader {
+    grid-column: 1 / span 2;
+  }
+
+  #koncept .content p {
+    grid-column: 1;
+    padding: 0 0 0 0;
+  }
+
+  #koncept .jump_girl {
+    max-width: 80%;
+    align-self: center;
   }
 
   #koncept_explainer .content {
@@ -1359,6 +1424,18 @@ footer .support {
     padding: 3rem;
   }
 
+  #koncept .content {
+    grid-template-columns: 60% 40%;
+  }
+
+  #koncept .jump_girl {
+    max-width: 20rem;
+  }
+
+  #koncept_features .content_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
   #udvikling_how .technologies.content {
     padding: 3rem 3rem 6rem;
   }
@@ -1441,6 +1518,25 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1366px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 1366px) {
+  #koncept .content h4 {
+    padding: 0 0 0 0;
+  }
+
+  #koncept .subheader {
+    grid-column: 1 / span 1;
+  }
+
+  #koncept .text_1 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  #koncept .image_wrapper {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    justify-content: flex-end;
+  }
+
   #udvikling_how .develop_background {
     padding-bottom: 45.2%;
     background-image: url(../img/develop_desktop.png);
