@@ -392,6 +392,7 @@ section > h2 {
   background-color: var(--theme-black);
   padding: 1rem;
   position: relative;
+  z-index: 500;
 }
 
 .blackbar::after {
@@ -399,7 +400,7 @@ section > h2 {
   position: absolute;
   height: 82px;
   width: 200vw;
-  bottom: -30px;
+  bottom: -25px;
   left: 0;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -709,9 +710,9 @@ section > h2 {
   z-index: 10;
 }
 
-#udvikling .blackbar {
+/* #udvikling .blackbar {
   margin: 3rem 0 0;
-}
+} */
 
 #udvikling_how > h2 {
   transform: rotate(90deg) translate(120%, 100%);
@@ -1048,6 +1049,24 @@ footer {
   min-height: 100vh;
   position: relative;
   z-index: 250;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  height: 82px;
+  width: 200vw;
+  top: -25px;
+  left: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background-size: 1920px 80px;
+  background-repeat: repeat-x;
+  background-position: top -50vw;
+  background-image: url(../img/rugged_line_blackbar.svg);
+  transition: none;
+  transform: scaleY(-1) scaleX(-1);
+  transform-origin: center center;
 }
 
 footer .content {
@@ -1625,6 +1644,10 @@ footer .support {
 
   #udvikling_how .development_text p {
     max-width: 85%;
+  }
+
+  #udvikling_how .technologies.content {
+    padding: 7vw 0 7vw;
   }
 }
 
