@@ -460,6 +460,11 @@ section > h2 {
 
 #koncept_try {
   padding: 22vh 0 0;
+  z-index: 10;
+}
+
+#koncept_try .graffiti {
+  transform: scaleX(-1);
 }
 
 #koncept::after {
@@ -502,7 +507,7 @@ section > h2 {
 }
 
 #koncept_features .content_wrapper {
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.5rem 3rem 1rem 0;
 }
 
 #koncept_features h4 {
@@ -1009,7 +1014,7 @@ section > h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.06;
+  opacity: 0.05;
   z-index: -10;
 }
 
