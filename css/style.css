@@ -320,6 +320,7 @@ nav.in {
 main {
   z-index: 250;
   position: relative;
+  background-color: var(--theme-light-gray);
 }
 
 main .more_wrapper {
@@ -423,18 +424,23 @@ section > h2 {
   height: auto;
 }
 
+/* koncept features slopes */
+
 #koncept {
   padding: 0 0 15vh;
+  z-index: 10;
 }
 
-/* koncept features slopes */
+#koncept_try {
+  padding: 22vh 0 0;
+}
 
 #koncept::after {
   content: "";
   width: 110vw;
   height: 25vh;
   position: absolute;
-  bottom: -1vw;
+  bottom: -1px;
   left: -1vw;
   z-index: 0;
   background-size: contain;
@@ -449,7 +455,7 @@ section > h2 {
   width: 105vw;
   height: 25vh;
   position: absolute;
-  top: -1vw;
+  top: -1px;
   left: -1vw;
   z-index: 0;
   background-size: contain;
@@ -469,14 +475,15 @@ section > h2 {
 }
 
 #koncept_features .content_wrapper {
-  display: grid;
-  grid-gap: 2rem;
+  padding: 0.5rem 0 0.5rem;
 }
 
-#koncept_features .content_wrapper h4 {
+#koncept_features h4 {
   color: var(--theme-orange);
   font-size: 1.75rem;
-  margin: 0 0 2rem;
+  margin: 0 0 2rem 0;
+  padding: 0 0 0 0;
+  z-index: 999;
 }
 
 #koncept_features ul {
@@ -488,12 +495,16 @@ section > h2 {
   position: relative;
   list-style-position: outside;
   z-index: 100;
-  padding: 0 3rem 0 2.5rem;
+  padding: 0 0 0 2.5rem;
 }
 
 #koncept_features ul li {
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
   position: relative;
+}
+
+#koncept_features ul li:last-child {
+  margin: 0 0 0;
 }
 
 #koncept_features ul li::before {
@@ -510,37 +521,20 @@ section > h2 {
   transition: 0.3s ease-out;
 }
 
-#koncept_features .feature_images {
-  position: relative;
-}
-
 #koncept_features .poster {
-  max-width: 60vw;
-  margin: 1rem 0 0;
+  max-width: 80%;
+  margin: 2rem 0 0;
 }
 
 #koncept_features .arm {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  max-width: 70vw;
+  right: -20vw;
+  bottom: -50vw;
+  max-width: 75%;
   z-index: 200;
 }
 
 /* koncept feature try */
-
-#features #poster {
-  max-width: 60vw;
-  margin: 1rem 0 0;
-}
-
-#features #arm {
-  position: absolute;
-  right: -32vw;
-  bottom: 0;
-  max-width: 80vw;
-  z-index: 200;
-}
 
 /* koncept explainer */
 
@@ -893,7 +887,7 @@ section > h2 {
   z-index: 10;
 }
 
-#bestil .graffiti {
+.graffiti {
   position: absolute;
   content: "";
   top: 0;
@@ -1099,6 +1093,19 @@ footer .support {
     right: 6vh;
   }
 
+  #koncept_features .poster {
+    max-width: 70%;
+    margin: 7vw 0 0;
+  }
+
+  #koncept_features .arm {
+    position: absolute;
+    right: -10vw;
+    bottom: -50vw;
+    max-width: 65%;
+    z-index: 200;
+  }
+
   #udvikling_how .development_explainer {
     max-width: 60%;
   }
@@ -1146,6 +1153,26 @@ footer .support {
     justify-content: center;
   }
 
+  #koncept_features .poster {
+    max-width: 60%;
+  }
+
+  #koncept_features .arm {
+    position: absolute;
+    right: 0;
+    bottom: -30vw;
+    max-width: 50%;
+    z-index: 200;
+  }
+
+  #koncept::after {
+    height: 15vh;
+  }
+
+  #koncept_try::before {
+    height: 15vh;
+  }
+
   #koncept_explainer ul {
     display: block;
   }
@@ -1161,7 +1188,7 @@ footer .support {
     margin: 0 25% 5% 5%;
   }
 
-  #bestil .graffiti {
+  .graffiti {
     background-image: url(../img/graffiti_tablet.jpg);
   }
 
@@ -1292,6 +1319,17 @@ footer .support {
   #koncept .jump_girl {
     max-width: 80%;
     align-self: center;
+  }
+
+  #koncept_features .poster {
+    max-width: 50%;
+  }
+
+  #koncept_features .arm {
+    right: 0vw;
+    bottom: -20vw;
+    max-width: 22rem;
+    z-index: 200;
   }
 
   #koncept_explainer .content {
@@ -1428,12 +1466,43 @@ footer .support {
     grid-template-columns: 60% 40%;
   }
 
+  #koncept .subheader {
+    grid-column: 1 / span 1;
+  }
+
+  #koncept .text_1 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  #koncept .image_wrapper {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    justify-content: center;
+  }
+
+  #koncept .content h4 {
+    padding: 0 0 0 0;
+  }
+
   #koncept .jump_girl {
     max-width: 20rem;
   }
 
-  #koncept_features .content_wrapper {
-    grid-template-columns: 1fr 1fr;
+  #koncept_features .poster {
+    position: absolute;
+    right: 20vw;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 17rem;
+    margin: 0 0 0;
+    z-index: 50;
+  }
+
+  #koncept_features .arm {
+    right: 0;
+    top: 50%;
+    width: 20rem;
   }
 
   #udvikling_how .technologies.content {
@@ -1459,7 +1528,7 @@ footer .support {
     margin: 0 50% 0 10%;
   }
 
-  #bestil .graffiti {
+  .graffiti {
     background-image: url(../img/graffiti_desktop.jpg);
   }
 }
@@ -1499,10 +1568,29 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1280px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 1280px) {
-  section > .content,
-  .blackbar h3 {
+  section > .content {
     margin-left: 7vw;
     margin-right: 7vw;
+  }
+
+  .blackbar {
+    padding: 1rem 1rem 1rem 7vw;
+  }
+
+  section > .content {
+    padding: 7vw 0 7vw;
+  }
+
+  #bestil .content {
+    padding: 7vw 0 0;
+  }
+
+  #koncept_features .poster {
+    right: 20vw;
+    top: 45%;
+    width: 20rem;
+    transform: translateY(-50%);
+    width: 25rem;
   }
 
   #koncept_explainer > .content {
@@ -1518,23 +1606,17 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries desktop 1366px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 1366px) {
+  section > .content {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
   #koncept .content h4 {
     padding: 0 0 0 0;
   }
 
-  #koncept .subheader {
-    grid-column: 1 / span 1;
-  }
-
-  #koncept .text_1 {
-    grid-row: 2;
-    grid-column: 1;
-  }
-
-  #koncept .image_wrapper {
-    grid-row: 1 / span 2;
-    grid-column: 2;
-    justify-content: flex-end;
+  .blackbar {
+    padding: 1rem 1rem 1rem 15vw;
   }
 
   #udvikling_how .develop_background {
@@ -1544,7 +1626,7 @@ footer .support {
     margin: 0 60% 0 0%;
   }
 
-  #bestil .graffiti {
+  .graffiti {
     background-image: url(../img/graffiti_desktop.jpg);
   }
 
@@ -1554,12 +1636,6 @@ footer .support {
     bottom: 40vh;
     left: auto;
     right: 10vw;
-  }
-
-  section > .content,
-  .blackbar h3 {
-    margin-left: 15vw;
-    margin-right: 15vw;
   }
 
   #koncept_explainer > .content {
@@ -1594,7 +1670,7 @@ footer .support {
     padding-bottom: 45.2%;
     background-image: url(../img/workstation_hd.jpg);
   }
-  #bestil .graffiti {
+  .graffiti {
     background-image: url(../img/graffiti_hd.jpg);
   }
 }
