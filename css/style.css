@@ -1630,8 +1630,12 @@ footer .support {
     max-width: 85%;
   }
 
+  #udvikling_how .content {
+    padding: 0 0 0;
+  }
+
   #udvikling_how .technologies.content {
-    padding: 7vw 0 7vw;
+    padding: 2rem 0 7vw;
   }
 }
 
