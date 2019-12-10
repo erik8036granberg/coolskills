@@ -1051,24 +1051,6 @@ footer {
   z-index: 250;
 }
 
-footer::before {
-  content: "";
-  position: absolute;
-  height: 82px;
-  width: 200vw;
-  top: -25px;
-  left: 0;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background-size: 1920px 80px;
-  background-repeat: repeat-x;
-  background-position: top -50vw;
-  background-image: url(../img/rugged_line_blackbar.svg);
-  transition: none;
-  transform: scaleY(-1) scaleX(-1);
-  transform-origin: center center;
-}
-
 footer .content {
   display: grid;
   grid-gap: 2rem;
@@ -1463,11 +1445,13 @@ footer .support {
   }
 
   #bestil .order_image_wrapper {
+    display: flex;
     grid-column: 1;
     grid-row: 2;
   }
 
   #bestil .order_image {
+    align-self: flex-end;
     width: 100%;
     margin: -1px 0 -1rem;
   }
