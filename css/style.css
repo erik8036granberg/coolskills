@@ -404,45 +404,73 @@ section > h2 {
 
 /* koncept */
 
-#koncept,
-#koncept_explainer {
-  position: relative;
-  background-color: var(--theme-light-gray);
-}
-
-.try_figure,
-.try_figure img {
-  padding: 2rem 0 2rem;
-}
-
-.try_figure h4 {
-  color: var(--theme-red);
-}
-
-.try_button {
-  color: var(--theme-blue);
+#koncept_intro {
   background-color: var(--theme-orange);
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.75rem;
-  line-height: 2rem;
-  border-radius: 1rem;
-  padding: 1rem;
-  text-align: center;
+  position: relative;
 }
 
-#features {
+#koncept_intro .content {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+#koncept_features {
   width: 100%;
   padding: 7rem 0 7rem;
   background-color: var(--theme-blue);
   position: relative;
 }
 
-#features h4 {
+#koncept_features h4 {
   color: var(--theme-orange);
   margin: 0 0 2rem;
 }
 
-#features::before {
+#koncept_features ul {
+  color: var(--theme-light-gray);
+  font-size: 1rem;
+  line-height: auto;
+  transition: 0.3s ease-out;
+  margin: 0;
+  position: relative;
+  list-style-position: outside;
+  z-index: 100;
+  padding: 0 3rem 0 2.5rem;
+}
+
+#koncept_features ul li {
+  margin: 0 0 2rem;
+  position: relative;
+}
+
+#koncept_features ul li::before {
+  position: absolute;
+  width: 1.75rem;
+  height: 2rem;
+  top: -0.5rem;
+  left: -2.5rem;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/coolskills-logo-symbol-orange.svg);
+  transition: 0.3s ease-out;
+}
+
+/* #features #poster {
+  max-width: 60vw;
+  margin: 1rem 0 0;
+}
+
+#features #arm {
+  position: absolute;
+  right: -32vw;
+  bottom: 0;
+  max-width: 80vw;
+  z-index: 200;
+} */
+
+/* #features::before {
   content: "";
   width: 100%;
   height: 20vw;
@@ -470,53 +498,14 @@ section > h2 {
   background-position: bottom right;
   background-image: url(../img/features_slope_mobile_bottom.svg);
   transition: 0.5s;
-}
+} */
 
-#features ul {
-  color: var(--theme-light-gray);
-  font-size: 1rem;
-  line-height: auto;
-  transition: 0.3s ease-out;
-  margin: 0;
+/* koncept explainer */
+
+#koncept_explainer {
   position: relative;
-  list-style-position: outside;
-  z-index: 100;
-  padding: 0 3rem 0 2.5rem;
+  background-color: var(--theme-light-gray);
 }
-
-#features ul li {
-  margin: 0 0 2rem;
-  position: relative;
-}
-
-#features ul li::before {
-  position: absolute;
-  width: 1.75rem;
-  height: 2rem;
-  top: -0.5rem;
-  left: -2.5rem;
-  content: "";
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(../img/coolskills-logo-symbol-orange.svg);
-  transition: 0.3s ease-out;
-}
-
-#features #poster {
-  max-width: 60vw;
-  margin: 1rem 0 0;
-}
-
-#features #arm {
-  position: absolute;
-  right: -32vw;
-  bottom: 0;
-  max-width: 80vw;
-  z-index: 200;
-}
-
-/* explainer images */
 
 #koncept_explainer .content {
   display: grid;
