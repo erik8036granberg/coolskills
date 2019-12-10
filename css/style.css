@@ -419,7 +419,7 @@ section > h2 {
 
 .content p,
 .content h4 {
-  padding: 0 15vw 0 0;
+  padding: 0 10vw 0 0;
 }
 
 .content h4 {
@@ -436,8 +436,7 @@ section > h2 {
   position: relative;
 }
 
-#koncept .content,
-#koncept_try .content {
+#koncept .content {
   display: grid;
   grid-gap: 2rem;
 }
@@ -564,11 +563,95 @@ section > h2 {
 
 /* koncept feature try */
 
+#koncept_try .content p {
+  padding: 0 0 0 0;
+}
+
+#koncept_try .wrapper {
+  position: relative;
+  line-height: 0;
+  margin: 3rem 0 2rem;
+  height: 30rem;
+  max-width: 30rem;
+}
+
+#koncept_try iframe {
+  background-color: var(--theme-light-gray);
+  transform: scale(0.9);
+  line-height: 0;
+  z-index: 999;
+  filter: contrast(1.2);
+}
+
+#koncept_try .arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: point 2s infinite ease-in-out;
+  line-height: 0;
+}
+
+#koncept_try .arrows img {
+  width: 1rem;
+}
+
+#koncept_try .top_arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+#koncept_try .right_arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+#koncept_try .bottom_arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+#koncept_try .left_arrow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes point {
+  0% {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  50% {
+    top: -1rem;
+    left: -1.25rem;
+    bottom: -1rem;
+    right: -1.25rem;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 /* koncept explainer */
 
 #koncept_explainer {
   position: relative;
   background-color: var(--theme-light-gray);
+  margin: 0 0 3rem;
 }
 
 #koncept_explainer .content {
@@ -926,7 +1009,7 @@ section > h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.07;
+  opacity: 0.06;
   z-index: -10;
 }
 
@@ -1160,6 +1243,11 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 600px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 600px) {
+  .content p,
+  .content h4 {
+    padding: 0 5vw 0 0;
+  }
+
   footer .content {
     grid-template-columns: 1fr 1fr;
   }
@@ -1199,6 +1287,12 @@ footer .support {
 
   #koncept_try::before {
     height: 15vh;
+    z-index: 10;
+  }
+
+  #koncept_try::after {
+    height: 15vh;
+    z-index: 10;
   }
 
   #koncept_explainer ul {
