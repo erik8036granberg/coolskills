@@ -275,48 +275,61 @@ nav.in {
   width: 100vw;
   height: 100vh;
   z-index: 0;
+  background-color: var(--theme-black);
 }
 
 #splash .slide {
   width: 100%;
   height: 100%;
-}
-
-#frame_1_fire {
-  background-image: url(../img/fire_mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-#frame_1_fire h1 {
+#splash .bg_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+
+#splash #fire_frame .bg_image {
+  background-image: url(../img/fire_mobile.jpg);
+}
+
+#splash #fire_frame h1 {
   font-size: 8vh;
   line-height: 7vh;
   max-width: 70vw;
   margin: 0 0 25vh;
+  z-index: 500;
 }
 
-#frame_1_fire .support {
+#splash #fire_frame .support {
   position: absolute;
   width: 15vh;
   height: auto;
   bottom: 18vh;
   left: 10vw;
+  z-index: 500;
 }
 
-#frame_1_fire .icons {
+#splash #fire_frame .icons {
   position: absolute;
   bottom: 6vh;
   right: 4vh;
   display: none;
   flex-direction: column;
-  z-index: 999;
+  z-index: 500;
 }
 
-#frame_1_fire .icons img {
+#splash #fire_frame .icons img {
   border: solid 2px #000;
   border-radius: 50%;
   width: 6vh;
@@ -1237,7 +1250,7 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries mobile landscape- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media only screen and (max-width: 888px) and (orientation: landscape) {
-  #frame_1_fire {
+  #splash #fire_frame .bg_image {
     background-image: url(../img/fire_mobile_landscape.jpg);
   }
 }
@@ -1253,7 +1266,7 @@ footer .support {
     padding: 1rem 1rem 1rem 3rem;
   }
 
-  #frame_1_fire .icons {
+  #splash #fire_frame .icons {
     bottom: 6vh;
     right: 6vh;
   }
@@ -1289,7 +1302,7 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries tablet portrait over 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 500px) and (portrait: landscape) {
-  #frame_1_fire {
+  #splash #fire_frame .bg_image {
     background-image: url(../img/fire_tablet_portrait.jpg);
   }
 }
@@ -1456,14 +1469,14 @@ footer .support {
     display: none;
   }
 
-  #frame_1_fire .icons {
+  #splash #fire_frame .icons {
     display: flex;
     flex-direction: row;
     bottom: 6vh;
     right: 6vh;
   }
 
-  #frame_1_fire .icons img {
+  #splash #fire_frame .icons img {
     border: solid 2px #000;
     border-radius: 50%;
     width: 4rem;
@@ -1773,7 +1786,7 @@ footer .support {
     max-width: 100%;
   }
 
-  #frame_1_fire {
+  #splash #fire_frame .bg_image {
     background-image: url(../img/fire_desktop.jpg);
   }
 
@@ -1791,11 +1804,11 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px tablet landscape- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media only screen and (max-width: 1080px) and (orientation: landscape) {
-  #frame_1_fire {
+  #splash #fire_frame .bg_image {
     background-image: url(../img/fire_tablet_landscape.jpg);
   }
 
-  #frame_1_fire .support {
+  #splash #fire_frame .support {
     width: 15vh;
     height: auto;
     bottom: 40vh;
@@ -1807,11 +1820,11 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px tablet portrait- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media only screen and (max-width: 1080px) and (orientation: portrait) {
-  #frame_1_fire {
+  #splash #fire_frame .bg_image {
     background-image: url(../img/fire_tablet_portrait.jpg);
   }
 
-  #frame_1_fire .support {
+  #splash #fire_frame .support {
     width: 15vh;
     height: auto;
     bottom: 40vh;
@@ -1915,7 +1928,7 @@ footer .support {
     background-image: url(../img/graffiti_desktop.jpg);
   }
 
-  #frame_1_fire .support {
+  #splash #fire_frame .support {
     width: 15vh;
     height: auto;
     bottom: 40vh;
@@ -1960,7 +1973,7 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries hd 1920px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 1500px) {
-  #frame_1_fire {
+  #splash #fire_frame .bg_image {
     background-image: url(../img/fire_hd_desktop.jpg);
   }
 

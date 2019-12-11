@@ -9,8 +9,8 @@ function init() {
   links();
   accordion();
   resize();
-  // setAOS();
   window.onresize = resize;
+  runSplash();
 }
 
 function links() {
@@ -49,13 +49,4 @@ function accordion() {
   }
 }
 
-// function setAOS() {
-//   setTimeout(function() {
-//     let script = document.createElement("script");
-//     script.src = "https://unpkg.com/aos@2.3.1/dist/aos.js";
-//     document.body.appendChild(script);
-//     script.onload = function() {
-//       AOS.init();
-//     };
-//   }, 2000);
-// }
+function runSplash() {}
