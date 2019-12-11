@@ -29,7 +29,7 @@ function resize() {
 function accordion() {
   // based on w3schools Collapsibles/Accordion
 
-  if (windowWidth < 800) {
+  if (windowWidth < 768) {
     var acc = document.getElementsByClassName("accordion");
     var i;
 

@@ -28,7 +28,8 @@ html {
 
 main *,
 main *:before,
-main *:after {
+main *:after,
+img {
   transition: 0.5s;
 }
 
@@ -57,7 +58,7 @@ body {
 }
 
 body div {
-  line-height: 1.6rem;
+  line-height: 1.5rem;
 }
 
 .hide {
@@ -74,6 +75,14 @@ a:link,
 a:active,
 a:visited {
   color: #fff;
+  text-decoration: none;
+}
+
+a.black,
+a.black:link,
+a.black:active,
+a.black:visited {
+  color: var(--theme-black);
   text-decoration: none;
 }
 
@@ -454,8 +463,12 @@ section > h2 {
   grid-gap: 2rem;
 }
 
-#koncept .text_1 {
+#koncept .koncept_text {
   margin: 0 0 -2rem;
+}
+
+#koncept .jump_girl_wrapper {
+  grid-row: 1;
 }
 
 #koncept .jump_girl {
@@ -464,10 +477,57 @@ section > h2 {
   height: auto;
 }
 
+#koncept .ar_info p,
+#koncept .support_info p {
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+
+#koncept .ar_info h5,
+#koncept .support_info h5 {
+  font-size: 1.75rem;
+}
+
+#koncept .support_info {
+  display: flex;
+  flex-direction: column;
+}
+
+#koncept .support_info .support_heart {
+  width: 33%;
+  align-self: flex-end;
+}
+
+#koncept .support_more {
+  position: relative;
+  align-self: flex-end;
+  font-weight: bold;
+  z-index: 999;
+  transition: 0.5;
+}
+
+#koncept .support_more:hover {
+  transform: scale(1.1);
+}
+
+#koncept .support_more::before {
+  position: absolute;
+  width: 2rem;
+  height: 1.6rem;
+  top: 0rem;
+  left: -2.3rem;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/support-heart_shape.svg);
+  z-index: 1;
+}
+
 /* koncept features slopes */
 
 #koncept {
-  padding: 0 0 15vh;
+  padding: 0 0 12rem;
   z-index: 10;
   position: relative;
 }
@@ -482,7 +542,7 @@ section > h2 {
 }
 
 #koncept_try {
-  padding: 22vh 0 0;
+  padding: 15rem 0 0;
   position: relative;
   z-index: 10;
 }
@@ -865,10 +925,6 @@ section > h2 {
   position: relative;
   z-index: 10;
 }
-
-/* #udvikling .blackbar {
-  margin: 3rem 0 0;
-} */
 
 #udvikling_how > h2 {
   transform: rotate(90deg) translate(120%, 100%);
@@ -1331,9 +1387,15 @@ footer .support {
     grid-template-columns: 1fr;
   }
 
-  #koncept .jump_girl_wrapper {
+  #koncept .jump_girl_wrapper,
+  #koncept .ar_dude_wrapper {
     display: flex;
     justify-content: center;
+  }
+
+  #koncept .ar_dude {
+    max-width: 75%;
+    align-self: flex-start;
   }
 
   #koncept_features .poster {
@@ -1392,9 +1454,9 @@ footer .support {
   }
 }
 
-/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 800px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 768px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .menu {
     transform: translateY(-50vh);
   }
@@ -1499,21 +1561,51 @@ footer .support {
 
   #koncept .content {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  #koncept .content p {
+    padding: 0 0 0 0;
   }
 
   #koncept .subheader {
     grid-column: 1 / span 2;
+    height: 100%;
   }
 
-  #koncept .content p {
-    grid-column: 1;
-    padding: 0 0 0 0;
+  #koncept .subheader > h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  #koncept .jump_girl_wrapper {
+    grid-column: 2;
+    grid-row: 2 / span 1;
   }
 
   #koncept .jump_girl {
     max-width: 80%;
-    align-self: center;
+    align-self: flex-start;
     z-index: 500;
+    margin: 0 0 10%;
+  }
+
+  #koncept .ar_dude_wrapper {
+    grid-row: 3 / span 2;
+  }
+
+  #koncept .ar_dude {
+    max-width: 100%;
+  }
+
+  #koncept .ar_info {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  #koncept .support_info {
+    position: relative;
+    grid-column: 2;
   }
 
   #koncept_features .poster {
@@ -1705,6 +1797,46 @@ footer .support {
   #koncept_try {
     padding: 15vh 0 0;
   }
+
+  #koncept .subheader {
+    grid-column: 1 / span 1;
+    padding: 0;
+  }
+
+  #koncept .jump_girl_wrapper {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  #koncept .jump_girl {
+    max-width: 80%;
+    align-self: flex-start;
+    z-index: 500;
+    margin: 0 0 0;
+  }
+
+  #koncept .ar_dude_wrapper {
+    grid-row: 3 / span 3;
+  }
+
+  #koncept .ar_info {
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  #koncept .support_info {
+    grid-row: 4 / span 2;
+    grid-column: 2;
+    margin: 1rem 0 0;
+  }
+
+  #koncept .support_info .support_heart {
+    position: absolute;
+    right: 0;
+    top: -6rem;
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 1080px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -1715,30 +1847,54 @@ footer .support {
   }
 
   #koncept .content {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: repeat(6, 1fr);
   }
 
   #koncept .subheader {
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 3;
+    padding: 3rem 0 0;
   }
 
-  #koncept .text_1 {
+  #koncept .koncept_text {
+    grid-column: 1 / span 3;
     grid-row: 2;
-    grid-column: 1;
   }
 
   #koncept .jump_girl_wrapper {
+    grid-column: 4 / span 3;
     grid-row: 1 / span 2;
-    grid-column: 2;
-    justify-content: center;
-  }
-
-  #koncept .content h4 {
-    padding: 0 0 0 0;
   }
 
   #koncept .jump_girl {
-    max-width: 20rem;
+    max-width: 70%;
+    align-self: flex-end;
+    z-index: 500;
+  }
+
+  #koncept .ar_dude_wrapper {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 2;
+    margin: 2vw 0 0;
+  }
+
+  #koncept .ar_info {
+    grid-row: 4;
+    grid-column: 3 / span 2;
+    margin: 2vw;
+  }
+
+  #koncept .support_info {
+    grid-row: 4;
+    grid-column: 5 / span 2;
+    margin: 2vw;
+  }
+
+  #koncept .support_info .support_heart {
+    position: absolute;
+    right: 0;
+    top: -8rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   #koncept_features .poster {
@@ -1849,8 +2005,40 @@ footer .support {
     padding: 7vw 0 7vw;
   }
 
-  #bestil .content {
-    padding: 7vw 0 0;
+  #koncept .subheader {
+    grid-column: 1 / span 3;
+    padding: 3rem 0 0;
+  }
+
+  #koncept .koncept_text {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+  }
+
+  #koncept .jump_girl_wrapper {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 2;
+  }
+
+  #koncept .jump_girl {
+    max-width: 65%;
+    align-self: flex-end;
+    z-index: 500;
+  }
+
+  #koncept .ar_dude_wrapper {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  #koncept .ar_info {
+    grid-row: 3;
+    grid-column: 3 / span 2;
+  }
+
+  #koncept .support_info {
+    grid-row: 3;
+    grid-column: 5 / span 2;
   }
 
   #koncept_features .poster {
@@ -1876,11 +2064,11 @@ footer .support {
   }
 
   #koncept {
-    padding: 0 0 22vh;
+    padding: 0 0 10vh;
   }
 
   #koncept_try {
-    padding: 22vh 0 0;
+    padding: 10vh 0 0;
   }
 
   #koncept_explainer > .content {
@@ -1898,6 +2086,10 @@ footer .support {
 
   #udvikling_how .technologies.content {
     padding: 2rem 0 7vw;
+  }
+
+  #bestil .content {
+    padding: 7vw 0 0;
   }
 }
 
@@ -1934,6 +2126,41 @@ footer .support {
     bottom: 40vh;
     left: auto;
     right: 10vw;
+  }
+
+  #koncept .jump_girl_wrapper {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 2;
+  }
+
+  #koncept .jump_girl {
+    max-width: 60%;
+    align-self: flex-start;
+    z-index: 500;
+  }
+
+  #koncept .ar_dude_wrapper {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    margin: 2vw 0 0;
+  }
+
+  #koncept .ar_info {
+    grid-row: 3;
+    grid-column: 3 / span 2;
+  }
+
+  #koncept .support_info {
+    grid-row: 3;
+    grid-column: 5 / span 2;
+  }
+
+  #koncept .support_info .support_heart {
+    position: absolute;
+    right: -7rem;
+    top: -8rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   #koncept_features {
@@ -1983,6 +2210,16 @@ footer .support {
 
   #koncept {
     padding: 0 0 12vh;
+  }
+
+  #koncept .jump_girl {
+    max-width: 50%;
+    align-self: flex-start;
+    z-index: 500;
+  }
+
+  #koncept .ar_dude {
+    transform: translateY(-2vw);
   }
 
   #koncept_try {
