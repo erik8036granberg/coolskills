@@ -1331,7 +1331,7 @@ footer .support {
     grid-template-columns: 1fr;
   }
 
-  #koncept .image_wrapper {
+  #koncept .jump_girl_wrapper {
     display: flex;
     justify-content: center;
   }
@@ -1727,7 +1727,7 @@ footer .support {
     grid-column: 1;
   }
 
-  #koncept .image_wrapper {
+  #koncept .jump_girl_wrapper {
     grid-row: 1 / span 2;
     grid-column: 2;
     justify-content: center;
