@@ -307,14 +307,15 @@ nav.in {
 }
 
 #splash #fire_frame,
+#splash #skatertricks,
 #splash #postermagic,
+#splash #vinkler,
 #splash #wondergirl {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 300;
 }
 
 #splash .bg_image {
@@ -326,8 +327,7 @@ nav.in {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  z-index: 0;
-  opacity: inherit;
+  z-index: 800;
 }
 
 #splash #fire_frame .bg_image {
@@ -347,13 +347,38 @@ nav.in {
   line-height: 7vh;
   max-width: 70vw;
   margin: 0 0 25vh;
-  z-index: 500;
   transition: 1s;
+  z-index: 999;
 }
 
 #splash .text_frame h1 {
   color: var(--theme-orange);
   margin: 0 0 25vh;
+}
+
+#splash #fire_frame {
+  z-index: 500;
+}
+#splash #skatertricks {
+  z-index: 510;
+}
+#splash #postermagic {
+  z-index: 520;
+}
+#splash #vinkel {
+  z-index: 530;
+}
+#splash #wondergirl {
+  z-index: 540;
+}
+.slide_6 {
+  z-index: 550;
+}
+.slide_7 {
+  z-index: 560;
+}
+.slide_8 {
+  z-index: 570;
 }
 
 #splash #fire_frame .heart {
@@ -362,7 +387,8 @@ nav.in {
   height: auto;
   bottom: 18vh;
   left: 10vw;
-  z-index: 500;
+  z-index: 999;
+  transition: 0.5s;
 }
 
 #splash .icons {
@@ -371,7 +397,7 @@ nav.in {
   right: 4vh;
   display: none;
   flex-direction: column;
-  z-index: 500;
+  z-index: 999;
   transition: 0.5;
 }
 
@@ -389,28 +415,6 @@ nav.in {
   width: 6vh;
   height: 6vh;
   margin: 0 0 0.5rem 0;
-}
-
-.slide_1 {
-  z-index: 500;
-}
-.slide_2 {
-  z-index: 510;
-}
-.slide_3 {
-  z-index: 520;
-}
-.slide_5 {
-  z-index: 530;
-}
-.slide_6 {
-  z-index: 540;
-}
-.slide_7 {
-  z-index: 550;
-}
-.slide_8 {
-  z-index: 560;
 }
 
 .zoom {
