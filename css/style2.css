@@ -26,12 +26,12 @@ html {
   box-sizing: border-box;
 }
 
-main *,
+/* main *,
 main *:before,
 main *:after,
 img {
   transition: 0.5s;
-}
+} */
 
 /*  remember accecebility */
 *:focus {
@@ -813,6 +813,14 @@ section > h2 {
   z-index: 500;
 }
 
+#koncept_explainer .blackbar {
+  background-color: var(--theme-red);
+}
+
+#koncept_explainer .blackbar::after {
+  background-image: url(../img/rugged_line_explainer.svg);
+}
+
 #koncept_explainer .how_wrapper > h4 {
   color: var(--theme-red);
   padding: 0 0 0 0;
@@ -833,7 +841,7 @@ section > h2 {
 }
 
 #koncept_explainer ul {
-  display: none;
+  /* display: none; */
   list-style: none;
   margin: 0 0 0 1rem;
 }
