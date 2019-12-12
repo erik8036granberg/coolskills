@@ -297,13 +297,34 @@ nav.in {
   transition: 2s;
 }
 
-#splash #fire_frame {
+#splash .splash_content {
+  transition: 2s;
+}
+
+#splash #fire_frame,
+#splash #postermagic,
+#splash #wondergirl {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 300;
+}
+
+#splash #text_frame_1 {
+  z-index: 280;
+}
+
+#splash #postermagic {
+  z-index: 260;
+}
+#splash #text_frame_2 {
+  z-index: 240;
+}
+
+#splash #wondergirl {
+  z-index: 220;
 }
 
 #splash .bg_image {
@@ -323,8 +344,12 @@ nav.in {
   background-image: url(../img/fire_mobile.jpg);
 }
 
-#splash #text_frame_1 {
-  z-index: 280;
+#splash #postermagic .bg_image {
+  background-image: url(../img/postermagic.jpg);
+}
+
+#splash #wondergirl .bg_image {
+  background-image: url(../img/wondergirl.jpg);
 }
 
 #splash h1 {
@@ -423,13 +448,14 @@ main .white {
 main .more {
   transition: 0.5s;
   transform-origin: center center;
+  transition: 1s;
 }
 
 main .more:hover {
   transform: scale(1.2);
 }
 
-main .more::after {
+main .more_arrow {
   position: absolute;
   content: "";
   top: 2rem;
@@ -437,10 +463,7 @@ main .more::after {
   height: 1.75rem;
   width: 1.75rem;
   transform: translateX(-50%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url(../img/symbol-down-arrow.svg);
+  transition: 1s;
 }
 
 .heart {
@@ -1389,6 +1412,12 @@ footer .support {
   #splash #fire_frame .bg_image {
     background-image: url(../img/fire_mobile_landscape.jpg);
   }
+  #splash #postermagic .bg_image {
+    background-image: url(../img/postermagic_mobile_landscape.jpg);
+  }
+  #splash #wondergirl .bg_image {
+    background-image: url(../img/wondergirl_mobile_landscape.jpg);
+  }
 }
 
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 500px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -1440,6 +1469,12 @@ footer .support {
 @media screen and (min-width: 500px) and (portrait: landscape) {
   #splash #fire_frame .bg_image {
     background-image: url(../img/fire_tablet_portrait.jpg);
+  }
+  #splash #postermagic .bg_image {
+    background-image: url(../img/postermagic_tablet_portrait.jpg);
+  }
+  #splash #wondergirl .bg_image {
+    background-image: url(../img/wondergirl_tablet_portrait.jpg);
   }
 }
 
@@ -2048,6 +2083,14 @@ footer .support {
     background-image: url(../img/fire_desktop.jpg);
   }
 
+  #splash #postermagic .bg_image {
+    background-image: url(../img/postermagic_desktop.jpg);
+  }
+
+  #splash #wondergirl .bg_image {
+    background-image: url(../img/wondergirl_desktop.jpg);
+  }
+
   #udvikling_how .develop_background {
     background-image: url(../img/develop_desktop.png);
     width: 60%;
@@ -2066,6 +2109,14 @@ footer .support {
     background-image: url(../img/fire_tablet_landscape.jpg);
   }
 
+  #splash #postermagic .bg_image {
+    background-image: url(../img/postermagic_tablet_landscape.jpg);
+  }
+
+  #splash #wondergirl .bg_image {
+    background-image: url(../img/wondergirl_tablet_landscape.jpg);
+  }
+
   #splash #fire_frame .heart {
     width: 15vh;
     height: auto;
@@ -2080,6 +2131,12 @@ footer .support {
 @media only screen and (max-width: 1080px) and (orientation: portrait) {
   #splash #fire_frame .bg_image {
     background-image: url(../img/fire_tablet_portrait.jpg);
+  }
+  #splash #postermagic .bg_image {
+    background-image: url(../img/postermagic_tablet_portrait.jpg);
+  }
+  #splash #wondergirl .bg_image {
+    background-image: url(../img/wondergirl_tablet_portrait.jpg);
   }
 
   #splash #fire_frame .heart {
@@ -2303,6 +2360,18 @@ footer .support {
 @media screen and (min-width: 1500px) {
   #splash #fire_frame .bg_image {
     background-image: url(../img/fire_hd_desktop.jpg);
+  }
+
+  #splash #postermagic .bg_image {
+    background-image: url(../img/postermagic_hd_desktop.jpg);
+  }
+
+  #splash #wondergirl .bg_image {
+    background-image: url(../img/wondergirl_hd_desktop.jpg);
+  }
+
+  .zoom {
+    animation: zoom forwards 20s ease-out;
   }
 
   #koncept_features {
