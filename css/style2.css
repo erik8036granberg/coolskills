@@ -1554,7 +1554,7 @@ footer .support {
   }
 
   #koncept {
-    padding: 0 0 25vh;
+    padding: 0 0 12rem;
     z-index: 10;
     position: relative;
   }
@@ -1791,11 +1791,11 @@ footer .support {
   }
 
   #koncept {
-    padding: 0 0 10vh;
+    padding: 0 0 6rem;
   }
 
   #koncept_try {
-    padding: 15vh 0 0;
+    padding: 6rem 0 0;
   }
 
   #koncept .subheader {
