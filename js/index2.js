@@ -52,169 +52,114 @@ function accordion() {
   }
 }
 
-// let target;
-// let timer;
-
 function runSplash() {
   document.querySelector("#splash").classList.remove("hide");
   console.log("runSplash");
+
   //set slides
+
   const allSlides = document.querySelectorAll("#splash .slide");
   allSlides.forEach(slide => {
-    slide.setAttribute(
-      "style",
-      "opacity:0; -moz-opacity:0; filter:alpha(opacity=0)"
-    );
+    slide.classList.add("faded");
   });
-  document
-    .querySelector(".slide_2 .splash_content")
-    .setAttribute(
-      "style",
-      "opacity:0; -moz-opacity:0; filter:alpha(opacity=0)"
-    );
+  const allContent = document.querySelectorAll("#splash .splash_content");
+  allContent.forEach(content => {
+    content.classList.add("faded");
+  });
+
   //run slides
   slide1();
 }
 
 function slide1() {
-  let target = ".slide_1";
-  let timer = 5000;
-  showSlide(target, timer, "all_frame");
-  setTimeout(() => {
-    slide2(target);
-  }, 6000);
+  swapblack();
+  document.querySelector(".slide_1 .bg_image").classList.add("zoom");
+  document.querySelector(".slide_1").classList.remove("faded");
+  setTimeout(function() {
+    document
+      .querySelector(".slide_1 .splash_content")
+      .classList.remove("faded");
+    setTimeout(function() {
+      document.querySelector(".slide_1 .splash_content").classList.add("faded");
+      setTimeout(function() {
+        document.querySelector(".slide_1").classList.add("faded");
+      }, 1000);
+      setTimeout(function() {
+        slide2();
+      }, 500);
+    }, 3000);
+  }, 1000);
 }
 
 function slide2() {
-  let target = ".slide_2";
-  let timer = 4000;
-  showSlide(target, timer, "text_frame");
-  setTimeout(() => {
-    slide3(target);
-  }, 5000);
+  swapWhite();
+  document.querySelector(".slide_2").classList.remove("faded");
+  setTimeout(function() {
+    document
+      .querySelector(".slide_2 .splash_content")
+      .classList.remove("faded");
+    setTimeout(function() {
+      document.querySelector(".slide_2 .splash_content").classList.add("faded");
+      setTimeout(function() {
+        document.querySelector(".slide_2").classList.add("faded");
+      }, 1000);
+      setTimeout(function() {
+        slide3();
+      }, 500);
+    }, 2000);
+  }, 1000);
 }
 
 function slide3() {
-  let target = ".slide_3";
-  let timer = 5000;
-  showSlide(target, timer, "img_frame");
-  // setTimeout(() => {
-  //   slide4(target);
-  // }, 7000);
+  swapblack();
+  document.querySelector(".slide_3 .bg_image").classList.add("zoom");
+  document.querySelector(".slide_3").classList.remove("faded");
+  setTimeout(function() {
+    document.querySelector(".slide_3").classList.add("faded");
+  }, 3000);
+  setTimeout(function() {
+    slide4();
+  }, 2500);
 }
 
 function slide4() {
-  let target = ".slide_4";
-  let timer = 3000;
-  showSlide(target, timer, "text_frame");
-  setTimeout(() => {
-    slide5(target);
-  }, 5000);
+  swapWhite();
+  document.querySelector(".slide_4").classList.remove("faded");
+  setTimeout(function() {
+    document
+      .querySelector(".slide_4 .splash_content")
+      .classList.remove("faded");
+    setTimeout(function() {
+      document.querySelector(".slide_4 .splash_content").classList.add("faded");
+      setTimeout(function() {
+        document.querySelector(".slide_4").classList.add("faded");
+      }, 1000);
+      setTimeout(function() {
+        slide5();
+      }, 500);
+    }, 2000);
+  }, 1000);
 }
 
 function slide5() {
-  let target = ".slide_5";
-  let timer = 5000;
-  showSlide(target, timer, "img_frame");
-  setTimeout(() => {
-    slide6(target);
-  }, 7000);
+  swapblack();
+  document.querySelector(".slide_5 .bg_image").classList.add("zoom");
+  document.querySelector(".slide_5").classList.remove("faded");
+  setTimeout(function() {
+    document.querySelector(".slide_5").classList.add("faded");
+  }, 3000);
+  setTimeout(function() {
+    // slide6();
+  }, 2500);
 }
 
-function slide6() {
-  let target = ".slide_6";
-  let timer = 3000;
-  showSlide(target, timer, "text_frame");
-  setTimeout(() => {
-    slide7(target);
-  }, 5000);
+function swapWhite() {
+  document.querySelector(".more").classList.add("white");
+  document.querySelector(".more_arrow").src =
+    "../img/symbol-down-arrow-white.svg";
 }
 
-function slide7() {
-  let target = ".slide_7";
-  let timer = 5000;
-  showSlide(target, timer, "all_frame");
-  setTimeout(() => {
-    slide8(target);
-  }, 7000);
-}
-
-function slide8() {
-  let target = ".slide_8";
-  let timer = 5000;
-  showSlide(target, timer, "all_frame");
-  setTimeout(() => {
-    runSplash(target);
-  }, 7000);
-}
-
-function showSlide(target, timer, frametype) {
-  console.log("showSlide");
-  console.log(target);
-  console.log(timer);
-  console.log(frametype);
-
-  // set more-arrow color
-  colorSwap(frametype);
-
-  //fade slide frame in
-  fadeup(target);
-
-  // set timer for hiding Frame again
-  let frametime = timer + 1000;
-  setTimeout(() => {
-    fadedown(target);
-  }, frametime);
-
-  //add zoom for images
-  if (frametype === "all_frame" || frametype === "img_frame") {
-    console.log("Det er en image_frame");
-    document.querySelector(target + " .bg_image").classList.add("zoom");
-  }
-
-  // show splash content
-  if (frametype === "all_frame" || frametype === "text_frame") {
-    let splash_content = target + " .splash_content";
-
-    setTimeout(() => {
-      fadeup(splash_content);
-    }, 1000);
-
-    // set timer for hiding content again
-
-    setTimeout(() => {
-      fadedown(splash_content);
-    }, timer);
-  }
-}
-
-function fadeup(input) {
-  console.log("fadeup");
-  let domTarget = document.querySelector(input);
-  domTarget.setAttribute(
-    "style",
-    "opacity:1; -moz-opacity:1; filter:alpha(opacity=100)"
-  );
-}
-
-function fadedown(input) {
-  console.log("fadedown");
-  let domTarget = document.querySelector(input);
-  console.log(domTarget);
-  domTarget.setAttribute(
-    "style",
-    "opacity:0; -moz-opacity:0; filter:alpha(opacity=0)"
-  );
-}
-
-function colorSwap(frametype) {
-  console.log("colorSwap");
-  if (frametype === "text_frame") {
-    document.querySelector(".more").classList.add("white");
-    document.querySelector(".more_arrow").src =
-      "../img/symbol-down-arrow-white.svg";
-  } else {
-    document.querySelector(".more").classList.remove("white");
-    document.querySelector(".more_arrow").src = "../img/symbol-down-arrow.svg";
-  }
+function swapblack() {
+  document.querySelector(".more").classList.remove("white");
+  document.querySelector(".more_arrow").src = "../img/symbol-down-arrow.svg";
 }
