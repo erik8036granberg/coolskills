@@ -320,7 +320,7 @@ nav.in {
   z-index: 500;
 }
 
-#splash #fire_frame .support {
+#splash #fire_frame .heart {
   position: absolute;
   width: 15vh;
   height: auto;
@@ -356,6 +356,8 @@ main {
 
 main .more_wrapper {
   position: absolute;
+  height: auto;
+  width: auto;
   top: -19vh;
   left: 50%;
   transform: translateX(-50%);
@@ -377,7 +379,7 @@ main .more:hover {
 main .more::after {
   position: absolute;
   content: "";
-  top: 5vh;
+  top: 2rem;
   left: 50%;
   height: 1.75rem;
   width: 1.75rem;
@@ -386,6 +388,16 @@ main .more::after {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/symbol-down-arrow.svg);
+}
+
+.heart {
+  transition: 0.5;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.heart:hover {
+  transform: scale(1.1);
 }
 
 /* sections */
@@ -493,7 +505,7 @@ section > h2 {
   flex-direction: column;
 }
 
-#koncept .support_info .support_heart {
+#koncept .support_info .heart {
   width: 33%;
   align-self: flex-end;
 }
@@ -793,6 +805,12 @@ section > h2 {
 
 #koncept_explainer .how_wrapper {
   position: relative;
+}
+
+#koncept_explainer > h2 {
+  color: var(--theme-red);
+  transform: rotate(90deg) translate(175%, 100%);
+  z-index: 500;
 }
 
 #koncept_explainer .how_wrapper > h4 {
@@ -1501,6 +1519,10 @@ footer .support {
     color: var(--theme-light-gray);
   }
 
+  nav ul li:last-child a {
+    color: var(--theme-orange);
+  }
+
   nav ul li a:hover {
     color: #fff;
   }
@@ -1536,6 +1558,11 @@ footer .support {
     flex-direction: row;
     bottom: 6vh;
     right: 6vh;
+    transition: 0.5;
+  }
+
+  #splash #fire_frame .icons img:hover {
+    transform: scale(1.1);
   }
 
   #splash #fire_frame .icons img {
@@ -1568,14 +1595,16 @@ footer .support {
     padding: 0 0 0 0;
   }
 
-  #koncept .subheader {
+  #koncept .subheader_wrapper {
     grid-column: 1 / span 2;
     height: 100%;
+    display: flex;
   }
 
-  #koncept .subheader > h4 {
+  #koncept .subheader_wrapper > h4 {
     margin: 0;
     padding: 0;
+    align-self: flex-end;
   }
 
   #koncept .jump_girl_wrapper {
@@ -1658,6 +1687,12 @@ footer .support {
   #koncept_explainer .content {
     grid-template-columns: 1fr 1fr;
     grid-gap: 4.5rem;
+  }
+
+  #koncept_explainer > h2 {
+    color: var(--theme-red);
+    transform: rotate(90deg) translate(150%, 100%);
+    z-index: 500;
   }
 
   #koncept_explainer .content.exp_red {
@@ -1798,7 +1833,7 @@ footer .support {
     padding: 6rem 0 0;
   }
 
-  #koncept .subheader {
+  #koncept .subheader_wrapper {
     grid-column: 1 / span 1;
     padding: 0;
   }
@@ -1830,7 +1865,7 @@ footer .support {
     margin: 1rem 0 0;
   }
 
-  #koncept .support_info .support_heart {
+  #koncept .support_info .heart {
     position: absolute;
     right: 0;
     top: -6rem;
@@ -1850,7 +1885,7 @@ footer .support {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  #koncept .subheader {
+  #koncept .subheader_wrapper {
     grid-column: 1 / span 3;
     padding: 3rem 0 0;
   }
@@ -1889,7 +1924,7 @@ footer .support {
     margin: 2vw;
   }
 
-  #koncept .support_info .support_heart {
+  #koncept .support_info .heart {
     position: absolute;
     right: 0;
     top: -8rem;
@@ -1964,7 +1999,7 @@ footer .support {
     background-image: url(../img/fire_tablet_landscape.jpg);
   }
 
-  #splash #fire_frame .support {
+  #splash #fire_frame .heart {
     width: 15vh;
     height: auto;
     bottom: 40vh;
@@ -1980,7 +2015,7 @@ footer .support {
     background-image: url(../img/fire_tablet_portrait.jpg);
   }
 
-  #splash #fire_frame .support {
+  #splash #fire_frame .heart {
     width: 15vh;
     height: auto;
     bottom: 40vh;
@@ -2005,7 +2040,7 @@ footer .support {
     padding: 7vw 0 7vw;
   }
 
-  #koncept .subheader {
+  #koncept .subheader_wrapper {
     grid-column: 1 / span 3;
     padding: 3rem 0 0;
   }
@@ -2022,8 +2057,6 @@ footer .support {
 
   #koncept .jump_girl {
     max-width: 65%;
-    align-self: flex-end;
-    z-index: 500;
   }
 
   #koncept .ar_dude_wrapper {
@@ -2090,6 +2123,7 @@ footer .support {
 
   #bestil .content {
     padding: 7vw 0 0;
+    grid-template-columns: 55% 45%;
   }
 }
 
@@ -2120,7 +2154,7 @@ footer .support {
     background-image: url(../img/graffiti_desktop.jpg);
   }
 
-  #splash #fire_frame .support {
+  #splash #fire_frame .heart {
     width: 15vh;
     height: auto;
     bottom: 40vh;
@@ -2135,7 +2169,7 @@ footer .support {
 
   #koncept .jump_girl {
     max-width: 60%;
-    align-self: flex-start;
+    align-self: center;
     z-index: 500;
   }
 
@@ -2155,7 +2189,7 @@ footer .support {
     grid-column: 5 / span 2;
   }
 
-  #koncept .support_info .support_heart {
+  #koncept .support_info .heart {
     position: absolute;
     right: -7rem;
     top: -8rem;
@@ -2214,8 +2248,6 @@ footer .support {
 
   #koncept .jump_girl {
     max-width: 50%;
-    align-self: flex-start;
-    z-index: 500;
   }
 
   #koncept .ar_dude {

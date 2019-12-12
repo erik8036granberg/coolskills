@@ -15,8 +15,11 @@ function init() {
 
 function links() {
   console.log("links");
-  document.querySelector(".more").addEventListener("click", () => {
+  document.querySelector(".more_wrapper").addEventListener("click", () => {
     window.location = "index.html#koncept";
+  });
+  document.querySelector("#splash .heart").addEventListener("click", () => {
+    window.location = "index.html#bestil";
   });
 }
 
