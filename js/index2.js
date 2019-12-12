@@ -52,4 +52,39 @@ function accordion() {
   }
 }
 
-function runSplash() {}
+function runSplash() {
+  console.log("runSplash");
+  zoomBackground(1);
+  setTimeout(() => {
+    document.querySelector("#fire_frame h1").classList.add("fadedown");
+  }, 4000);
+  setTimeout(() => {
+    document.querySelector("#fire_frame").classList.add("fadedown");
+    slide2();
+  }, 5000);
+}
+
+function slide2() {
+  zoomBackground(1);
+  colorWhite();
+  setTimeout(() => {
+    document.querySelector("#text_frame_1 h1").classList.add("fadedown");
+  }, 4000);
+  setTimeout(() => {
+    document.querySelector("#text_frame_1").classList.add("fadedown");
+  }, 5000);
+}
+
+function zoomBackground(activeSlide) {
+  document
+    .querySelector("#splash .slide_" + activeSlide + " .bg_image")
+    .classList.add("zoom");
+}
+
+function colorWhite() {
+  document.querySelector(".more").classList.add("white");
+}
+
+function colorblack() {
+  document.querySelector(".more").classList.add("white");
+}
