@@ -448,7 +448,7 @@ main .more_wrapper {
   position: absolute;
   height: auto;
   width: auto;
-  top: -15vh;
+  top: -20vh;
   left: 50%;
   transform: translateX(-50%);
   font-family: "Bebas Neue", cursive;
@@ -1690,6 +1690,10 @@ footer .support {
 
   #splash .text_frame .icons img {
     border: solid 2px var(--theme-light-gray);
+  }
+
+  main .more_wrapper {
+    top: -12vh;
   }
 
   section > h2 {
