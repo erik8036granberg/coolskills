@@ -2249,6 +2249,10 @@ footer .support {
     margin-right: 12vw;
   }
 
+  #koncept_explainer .box p {
+    padding: 0 3vw 0 0;
+  }
+
   #udvikling_how .development_text p {
     max-width: 85%;
   }
@@ -2354,6 +2358,10 @@ footer .support {
     margin-right: 20vw;
   }
 
+  #koncept_explainer .box p {
+    padding: 0 0 0 0;
+  }
+
   footer .content {
     grid-template-columns: 15vw 30vw auto auto;
     grid-gap: 5vw;
@@ -2408,6 +2416,10 @@ footer .support {
 
   #koncept_try {
     padding: 8vh 0 0;
+  }
+
+  #koncept_explainer .box p {
+    padding: 0 4vw 0 0;
   }
 
   #udvikling #develop_image {
