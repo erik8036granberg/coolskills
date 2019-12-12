@@ -52,39 +52,75 @@ function accordion() {
   }
 }
 
+let target;
+let timer;
+
 function runSplash() {
   console.log("runSplash");
-  zoomBackground(1);
-  setTimeout(() => {
-    document.querySelector("#fire_frame h1").classList.add("fadedown");
-  }, 4000);
-  setTimeout(() => {
-    document.querySelector("#fire_frame").classList.add("fadedown");
-    slide2();
-  }, 5000);
+  //set slides
+  const allSlides = document.querySelectorAll("#splash .slide");
+  allSlides.forEach(slide => {
+    slide.classList.add("faded");
+  });
+  document.querySelector(".slide_2 .splash_content").classList.add("faded");
+  //run slides
+  target = ".slide_1";
+  timer = 4000;
+  showSlide(target, timer, "all_frame");
 }
 
-function slide2() {
-  zoomBackground(1);
-  colorWhite();
+function showSlide(target, timer, frametype) {
+  console.log("showSlide");
+
+  // set more-arrow color
+  colorSwap(frametype);
+
+  //fade slide frame in
+  fadeup(target, timer);
+
+  //add zoom for images
+  if (frametype === "all_frame" || frametype === "img_frame") {
+    document.querySelector(target + " .bg_image").classList.add("zoom");
+  }
+  // add in for text
+  if (frametype === "all_frame" || frametype === "text_frame") {
+    let splash_content = target + " .splash_content";
+    fadeup(splash_content);
+    // set timer for hiding content again
+    setTimeout(() => {
+      fadedown(splash_content);
+    }, timer);
+  }
+  // set timer for hiding content again
+  let frame_time = timer + 1000;
   setTimeout(() => {
-    document.querySelector("#text_frame_1 h1").classList.add("fadedown");
-  }, 4000);
-  setTimeout(() => {
-    document.querySelector("#text_frame_1").classList.add("fadedown");
-  }, 5000);
+    fadedown(target);
+  }, frame_time);
 }
 
-function zoomBackground(activeSlide) {
-  document
-    .querySelector("#splash .slide_" + activeSlide + " .bg_image")
-    .classList.add("zoom");
+function fadeup(target) {
+  console.log("fadeup");
+  const domTarget = document.querySelector(target);
+  domTarget.setAttribute(
+    "style",
+    "opacity:1; -moz-opacity:1; filter:alpha(opacity=100)"
+  );
 }
 
-function colorWhite() {
-  document.querySelector(".more").classList.add("white");
+function fadedown(target) {
+  console.log("fadedown");
+  const domTarget = document.querySelector(target);
+  domTarget.setAttribute(
+    "style",
+    "opacity:0; -moz-opacity:0; filter:alpha(opacity=0)"
+  );
 }
 
-function colorblack() {
-  document.querySelector(".more").classList.add("white");
+function colorSwap(frametype) {
+  console.log("colorSwap");
+  if (frametype === "text_frame") {
+    document.querySelector(".more").classList.add("white");
+  } else {
+    document.querySelector(".more").classList.remove("white");
+  }
 }

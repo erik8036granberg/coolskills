@@ -294,7 +294,7 @@ nav.in {
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: 1s;
+  transition: 2s;
 }
 
 #splash #fire_frame {
@@ -389,19 +389,10 @@ nav.in {
   }
 }
 
-.fadedown {
-  animation: fadedown forwards 2s ease-out;
-}
-
-@keyframes fadedown {
-  0% {
-    opacity: 1;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-  }
-  100% {
-    opacity: 0;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-  }
+.faded {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  pointer-events: none;
 }
 
 /* main */
