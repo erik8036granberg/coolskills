@@ -1,15 +1,35 @@
 "use strict";
 
 let windowWidth;
+let pageContent;
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+  getPageContent();
   links();
   accordion();
   resize();
   window.onresize = resize;
   runSplash();
+}
+
+// - - - - - - - - - - - get page content  - - - - - - - - - - -
+
+function getPageContent() {
+  fetch("http://erik-crg.dk/kea/coolskills/wordpress/wp-json/wp/v2/pages/7")
+    //   format as jason & send to sort
+    .then(res => res.json())
+    .then(data => {
+      pageContent = data;
+      console.log(pageContent);
+    });
+}
+
+function insertPageContent() {
+  let dest = document.querySelector("[data-container]");
+
+  // - - - - - - - - - - - page title & description - - - - - - - - - - -
 }
 
 function links() {
