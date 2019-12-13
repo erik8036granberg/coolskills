@@ -60,6 +60,9 @@ function runSplash() {
   document.querySelector("#splash #postermagic").classList.add("faded");
   document.querySelector("#splash #vinkler").classList.add("faded");
   document.querySelector("#splash #wondergirl").classList.add("faded");
+  document.querySelector("#splash #fedt").classList.add("faded");
+  // document.querySelector("#splash #support").classList.add("faded");
+  // document.querySelector("#splash #streetsport").classList.add("faded");
 
   document
     .querySelector("#splash #fire_frame .splash_content")
@@ -160,8 +163,72 @@ function slide5() {
     document.querySelector("#splash #wondergirl").classList.add("faded");
   }, 3000);
   setTimeout(function() {
-    // slide6();
+    slide6();
   }, 2500);
+}
+
+function slide6() {
+  swapWhite();
+  document.querySelector("#splash #fedt").classList.remove("faded");
+  setTimeout(function() {
+    document
+      .querySelector("#splash #fedt .splash_content")
+      .classList.remove("faded");
+    setTimeout(function() {
+      document
+        .querySelector("#splash #fedt .splash_content")
+        .classList.add("faded");
+      setTimeout(function() {
+        document.querySelector("#splash #fedt").classList.add("faded");
+      }, 1000);
+      setTimeout(function() {
+        // slide7();
+      }, 500);
+    }, 2000);
+  }, 1000);
+}
+
+function slide7() {
+  swapBlack();
+  document.querySelector("#splash #support .bg_image").classList.add("zoom");
+  document.querySelector("#splash #support").classList.remove("faded");
+  setTimeout(function() {
+    document
+      .querySelector("#splash #support .splash_content")
+      .classList.remove("faded");
+    setTimeout(function() {
+      document
+        .querySelector("#splash #support .splash_content")
+        .classList.add("faded");
+      setTimeout(function() {
+        document.querySelector("#splash #support").classList.add("faded");
+      }, 1000);
+      setTimeout(function() {
+        slide2();
+      }, 500);
+    }, 3000);
+  }, 1000);
+}
+
+function slide8() {
+  swapWhite();
+  document.querySelector("#splash #streetsport").classList.remove("faded");
+  setTimeout(function() {
+    document
+      .querySelector("#splash #streetsport .splash_content")
+      .classList.remove("faded");
+    setTimeout(function() {
+      document
+        .querySelector("#splash #streetsport .splash_content")
+        .classList.add("faded");
+      setTimeout(function() {
+        document.querySelector("#splash #streetsport").classList.add("faded");
+      }, 1000);
+      setTimeout(function() {
+        runSplash();
+      }, 500);
+    }, 2000);
+  }, 1000);
 }
 
 function swapWhite() {
