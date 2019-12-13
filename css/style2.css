@@ -439,8 +439,11 @@ nav.in {
 }
 
 #splash #support .help_heart {
-  max-width: 20%;
-  margin: 5vh auto 0;
+  max-width: 35%;
+  margin: 0 auto 0;
+}
+
+.beating_heart {
   animation: heartbeat 2s infinite ease-in-out;
 }
 
@@ -477,6 +480,24 @@ nav.in {
 #splash #support .splash_content h1,
 #splash #support .splash_content h2 {
   margin: 0 0 0;
+}
+
+#splash #streetsport .splash_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#splash #streetsport img {
+  max-width: 12rem;
+  margin: 2rem 0 2rem;
+}
+
+#splash #streetsport h2 {
+  color: #fff;
+  font-size: 5vh;
+  max-width: 75vw;
 }
 
 .zoom {
@@ -1567,6 +1588,11 @@ footer .support {
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - media queries 600px- - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 600px) {
+  #splash #support .help_heart {
+    max-width: 25%;
+    margin: 5vh auto 0;
+  }
+
   .content p,
   .content h4 {
     padding: 0 5vw 0 0;
@@ -1790,6 +1816,11 @@ footer .support {
 
   #splash .text_frame .icons img {
     border: solid 2px var(--theme-light-gray);
+  }
+
+  #splash #support .help_heart {
+    max-width: 12rem;
+    margin: 5vh auto 0;
   }
 
   main .more_wrapper {

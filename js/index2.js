@@ -55,6 +55,19 @@ function runSplash() {
   document.querySelector("#splash").classList.remove("hide");
   console.log("runSplash");
 
+  document
+    .querySelector("#splash #fire_frame .bg_image")
+    .classList.remove("zoom");
+  document
+    .querySelector("#splash #postermagic .bg_image")
+    .classList.remove("zoom");
+  document
+    .querySelector("#splash #wondergirl .bg_image")
+    .classList.remove("zoom");
+  document
+    .querySelector("#splash #wondergirl .bg_image")
+    .classList.remove("zoom");
+
   document.querySelector("#splash #fire_frame").classList.add("faded");
   document.querySelector("#splash #skatertricks").classList.add("faded");
   document.querySelector("#splash #postermagic").classList.add("faded");
@@ -74,7 +87,7 @@ function runSplash() {
     .querySelector("#splash #vinkler .splash_content")
     .classList.add("faded");
   //run slides
-  slide7();
+  slide1();
 }
 
 function slide1() {
@@ -190,21 +203,20 @@ function slide6() {
 
 function slide7() {
   swapBlack();
-  document.querySelector("#splash #support .bg_image").classList.add("zoom");
   document.querySelector("#splash #support").classList.remove("faded");
   setTimeout(function() {
     document
       .querySelector("#splash #support .splash_content")
       .classList.remove("faded");
     setTimeout(function() {
-      // document
-      //   .querySelector("#splash #support .splash_content")
-      //   .classList.add("faded");
+      document
+        .querySelector("#splash #support .splash_content")
+        .classList.add("faded");
       setTimeout(function() {
-        // document.querySelector("#splash #support").classList.add("faded");
+        document.querySelector("#splash #support").classList.add("faded");
       }, 1000);
       setTimeout(function() {
-        // slide8();
+        slide8();
       }, 500);
     }, 3000);
   }, 1000);
