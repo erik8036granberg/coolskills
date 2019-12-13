@@ -61,8 +61,8 @@ function runSplash() {
   document.querySelector("#splash #vinkler").classList.add("faded");
   document.querySelector("#splash #wondergirl").classList.add("faded");
   document.querySelector("#splash #fedt").classList.add("faded");
-  // document.querySelector("#splash #support").classList.add("faded");
-  // document.querySelector("#splash #streetsport").classList.add("faded");
+  document.querySelector("#splash #support").classList.add("faded");
+  document.querySelector("#splash #streetsport").classList.add("faded");
 
   document
     .querySelector("#splash #fire_frame .splash_content")
@@ -74,7 +74,7 @@ function runSplash() {
     .querySelector("#splash #vinkler .splash_content")
     .classList.add("faded");
   //run slides
-  slide1();
+  slide7();
 }
 
 function slide1() {
@@ -182,7 +182,7 @@ function slide6() {
         document.querySelector("#splash #fedt").classList.add("faded");
       }, 1000);
       setTimeout(function() {
-        // slide7();
+        slide7();
       }, 500);
     }, 2000);
   }, 1000);
@@ -197,14 +197,14 @@ function slide7() {
       .querySelector("#splash #support .splash_content")
       .classList.remove("faded");
     setTimeout(function() {
-      document
-        .querySelector("#splash #support .splash_content")
-        .classList.add("faded");
+      // document
+      //   .querySelector("#splash #support .splash_content")
+      //   .classList.add("faded");
       setTimeout(function() {
-        document.querySelector("#splash #support").classList.add("faded");
+        // document.querySelector("#splash #support").classList.add("faded");
       }, 1000);
       setTimeout(function() {
-        slide2();
+        // slide8();
       }, 500);
     }, 3000);
   }, 1000);
@@ -223,10 +223,10 @@ function slide8() {
         .classList.add("faded");
       setTimeout(function() {
         document.querySelector("#splash #streetsport").classList.add("faded");
+        setTimeout(function() {
+          runSplash();
+        }, 2000);
       }, 1000);
-      setTimeout(function() {
-        runSplash();
-      }, 500);
     }, 2000);
   }, 1000);
 }
