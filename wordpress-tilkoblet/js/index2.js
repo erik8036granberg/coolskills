@@ -22,14 +22,203 @@ function getPageContent() {
     .then(res => res.json())
     .then(data => {
       pageContent = data;
+      console.log("data fetch");
       console.log(pageContent);
+      insertPageContent();
     });
 }
 
 function insertPageContent() {
+  console.log("insertPageContent");
   let dest = document.querySelector("[data-container]");
 
   // - - - - - - - - - - - page title & description - - - - - - - - - - -
+
+  dest.querySelector("[data-seo_title]").textContent =
+    pageContent.acf.seo_title;
+  dest
+    .querySelector("[data-seo_description]")
+    .setAttribute("content", pageContent.acf.seo_description);
+
+  // - - - - - - - - - - - splash - - - - - - - - - - -
+
+  dest.querySelector("[data-splash_header]").textContent =
+    pageContent.acf.splash_header;
+
+  dest.querySelector("[data-splash_text_slide_1]").textContent =
+    pageContent.acf.splash_text_slide_1;
+
+  dest.querySelector("[data-splash_text_slide_2]").textContent =
+    pageContent.acf.splash_text_slide_2;
+
+  dest.querySelector("[data-splash_text_slide_3]").splash_text_slide_3 =
+    pageContent.acf.splash_text_slide_3;
+
+  dest.querySelector("[data-splash_crowdfunding]").innerHTML =
+    pageContent.acf.splash_crowdfunding;
+
+  dest.querySelector("[data-splash_crowdfunding_sub]").innerHTML =
+    pageContent.acf.splash_crowdfunding_sub;
+
+  dest.querySelector("[data-splash_logo_streetsport]").textContent =
+    pageContent.acf.splash_logo_streetsport;
+
+  // - - - - - - - - - - - koncept - - - - - - - - - - -
+
+  dest.querySelector("[data-koncept_header]").textContent =
+    pageContent.acf.koncept_header;
+
+  dest.querySelector("[data-koncept_sub_header]").textContent =
+    pageContent.acf.koncept_sub_header;
+
+  dest.querySelector("[data-koncept_main_text]").innerHTML =
+    pageContent.acf.koncept_main_text;
+
+  dest.querySelector("[data-koncept_ar_info_header]").textContent =
+    pageContent.acf.koncept_ar_info_header;
+
+  dest.querySelector("[data-koncept_ar_info]").innerHTML =
+    pageContent.acf.koncept_ar_info;
+
+  dest.querySelector("[data-koncept_support_header]").textContent =
+    pageContent.acf.koncept_support_header;
+
+  dest.querySelector("[data-koncept_support_info]").textContent =
+    pageContent.acf.koncept_support_info;
+
+  dest.querySelector("[data-koncept_features_header]").textContent =
+    pageContent.acf.koncept_features_header;
+
+  dest.querySelector("[data-koncept_features_bullets]").innerHTML =
+    pageContent.acf.koncept_features_bullets;
+
+  dest.querySelector("[data-koncept_try_ar_header]").textContent =
+    pageContent.acf.koncept_try_ar_header;
+
+  dest.querySelector("[data-koncept_try_ar_info]").innerHTML =
+    pageContent.acf.koncept_try_ar_info;
+
+  dest.querySelector("[data-koncept_test_header]").textContent =
+    pageContent.acf.koncept_test_header;
+
+  dest.querySelector("[data-koncept_3d_test]").textContent =
+    pageContent.acf.koncept_3d_test;
+
+  dest.querySelector("[data-koncept_ar_test]").textContent =
+    pageContent.acf.koncept_ar_test;
+
+  // - - - - - - - - - - - faq - - - - - - - - - - -
+
+  dest.querySelector("[data-faq_header]").textContent =
+    pageContent.acf.faq_header;
+
+  dest.querySelector("[data-faq_1_header]").textContent =
+    pageContent.acf.faq_1_header;
+
+  dest.querySelector("[data-faq_1_text]").textContent =
+    pageContent.acf.faq_1_text;
+
+  dest.querySelector("[data-faq_1_bullets]").innerHTML =
+    pageContent.acf.faq_1_bullets;
+
+  dest.querySelector("[data-faq_2_header]").textContent =
+    pageContent.acf.faq_2_header;
+
+  dest.querySelector("[data-faq_2_text]").textContent =
+    pageContent.acf.faq_2_text;
+
+  dest.querySelector("[data-faq_2_bullets]").textContent =
+    pageContent.acf.faq_2_bullets;
+
+  dest.querySelector("[data-faq_3_header]").textContent =
+    pageContent.acf.faq_3_header;
+
+  dest.querySelector("[data-faq_3_text]").textContent =
+    pageContent.acf.faq_3_text;
+
+  dest.querySelector("[data-faq_3_bullets]").innerHTML =
+    pageContent.acf.faq_3_bullets;
+
+  dest.querySelector("[data-faq_4_header]").textContent =
+    pageContent.acf.faq_4_header;
+
+  dest.querySelector("[data-faq_4_text]").textContent =
+    pageContent.acf.faq_4_text;
+
+  dest.querySelector("[data-faq_4_bullets]").innerHTML =
+    pageContent.acf.faq_4_bullets;
+
+  dest.querySelector("[data-faq_5_header]").textContent =
+    pageContent.acf.faq_5_header;
+
+  dest.querySelector("[data-faq_5_text]").textContent =
+    pageContent.acf.faq_5_text;
+
+  dest.querySelector("[data-faq_5_bullets]").innerHTML =
+    pageContent.acf.faq_5_bullets;
+
+  dest.querySelector("[data-faq_6_header]").textContent =
+    pageContent.acf.faq_6_header;
+
+  dest.querySelector("[data-faq_6_text]").textContent =
+    pageContent.acf.faq_6_text;
+
+  dest.querySelector("[data-faq_6_bullets]").innerHTML =
+    pageContent.acf.faq_6_bullets;
+
+  // - - - - - - - - - - - development - - - - - - - - - - -
+
+  dest.querySelector("[data-development_header]").textContent =
+    pageContent.acf.development_header;
+  dest.querySelector("[data-development_text]").innerHTML =
+    pageContent.acf.development_text;
+
+  dest.querySelector("[data-development_text_sub_header]").textContent =
+    pageContent.acf.development_text_sub_header;
+
+  dest.querySelector("[data-development_bullets]").innerHTML =
+    pageContent.acf.development_bullets;
+
+  dest.querySelector("[data-development_techno_header]").textContent =
+    pageContent.acf.development_techno_header;
+  dest.querySelector("[data-development_ar_text]").textContent =
+    pageContent.acf.development_ar_text;
+  dest.querySelector("[data-development_3d_text]").textContent =
+    pageContent.acf.development_3d_text;
+  dest.querySelector("[data-development_ir_text]").textContent =
+    pageContent.acf.development_ir_text;
+  dest.querySelector("[data-development_mc_text]").textContent =
+    pageContent.acf.development_mc_text;
+
+  // - - - - - - - - - - - bestil / støt - - - - - - - - - - -
+
+  dest.querySelector("[data-support_header]").textContent =
+    pageContent.acf.support_header;
+  dest.querySelector("[data-support_sub_header]").textContent =
+    pageContent.acf.support_sub_header;
+  dest.querySelector("[data-support_text]").innerHTML =
+    pageContent.acf.support_text;
+  dest.querySelector("[data-support_flow_1]").textContent =
+    pageContent.acf.support_flow_1;
+  dest.querySelector("[data-support_flow_2]").textContent =
+    pageContent.acf.support_flow_2;
+  dest.querySelector("[data-support_flow_3]").textContent =
+    pageContent.acf.support_flow_3;
+  dest.querySelector("[data-support_flow_ok]").textContent =
+    pageContent.acf.support_flow_ok;
+  dest.querySelector("[data-support_flow_button]").textContent =
+    pageContent.acf.support_flow_button;
+  dest.querySelector("[data-support_facts_header]").textContent =
+    pageContent.acf.support_facts_header;
+  dest.querySelector("[data-support_facts_bullets]").innerHTML =
+    pageContent.acf.support_facts_bullets;
+
+  // - - - - - - - - - - - footer - - - - - - - - - - -
+
+  dest.querySelector("[data-footer_contact]").innerHTML =
+    pageContent.acf.footer_contact;
+  dest.querySelector("[data-footer_about]").innerHTML =
+    pageContent.acf.footer_about;
 }
 
 function links() {
