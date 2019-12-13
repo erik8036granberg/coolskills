@@ -127,7 +127,7 @@ function insertPageContent() {
   dest.querySelector("[data-faq_2_text]").textContent =
     pageContent.acf.faq_2_text;
 
-  dest.querySelector("[data-faq_2_bullets]").textContent =
+  dest.querySelector("[data-faq_2_bullets]").innerHTML =
     pageContent.acf.faq_2_bullets;
 
   dest.querySelector("[data-faq_3_header]").textContent =
