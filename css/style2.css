@@ -398,7 +398,7 @@ nav.in {
   display: none;
   flex-direction: column;
   z-index: 999;
-  transition: 0.5;
+  transition: 0.5s;
 }
 
 #splash .icons img {
@@ -455,6 +455,15 @@ main .more_wrapper {
   font-size: 1.3rem;
   cursor: pointer;
   z-index: 999;
+  transition: 1s;
+}
+
+main .more_wrapper svg {
+  transition: 1s;
+}
+
+main .white_text {
+  color: var(--theme-light-gray);
 }
 
 main .white {
@@ -462,9 +471,8 @@ main .white {
 }
 
 main .more {
-  transition: 0.5s;
-  transform-origin: center center;
   transition: 1s;
+  transform-origin: center center;
 }
 
 main .more:hover {
@@ -483,7 +491,7 @@ main .more_arrow {
 }
 
 .heart {
-  transition: 0.5;
+  transition: 0.5s;
   cursor: pointer;
   z-index: 500;
 }
@@ -608,7 +616,7 @@ section > h2 {
   align-self: flex-end;
   font-weight: bold;
   z-index: 999;
-  transition: 0.5;
+  transition: 0.5s;
 }
 
 #koncept .support_more:hover {
@@ -1671,7 +1679,7 @@ footer .support {
     flex-direction: row;
     bottom: 6vh;
     right: 6vh;
-    transition: 0.5;
+    transition: 0.5s;
   }
 
   #splash .icons img:hover,

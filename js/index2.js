@@ -165,12 +165,11 @@ function slide5() {
 }
 
 function swapWhite() {
-  document.querySelector(".more").classList.add("white");
-  document.querySelector(".more_arrow").src =
-    "../img/symbol-down-arrow-white.svg";
+  document.querySelector(".more").classList.add("white_text");
+  document.querySelector(".more svg").style.fill = "#d5d5d4";
 }
 
 function swapBlack() {
-  document.querySelector(".more").classList.remove("white");
-  document.querySelector(".more_arrow").src = "../img/symbol-down-arrow.svg";
+  document.querySelector(".more").classList.remove("white_text");
+  document.querySelector(".more svg").style.fill = "#101010";
 }
