@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'TequilaSunset-Regular';
+  src: url('TequilaSunset-Regular.eot?#iefix') format('embedded-opentype'),  url('TequilaSunset-Regular.otf')  format('opentype'),
+	     url('TequilaSunset-Regular.woff') format('woff'), url('TequilaSunset-Regular.ttf')  format('truetype'), url('TequilaSunset-Regular.svg#TequilaSunset-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

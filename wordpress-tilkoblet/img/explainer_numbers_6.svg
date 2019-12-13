@@ -1,0 +1,19 @@
+<svg id="Layer_1_copy_5" data-name="Layer 1 copy 5" xmlns="http://www.w3.org/2000/svg" width="100.2" height="216" viewBox="0 0 100.2 216">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #851b22;
+      }
+    </style>
+  </defs>
+  <title>explainer_numbers_6</title>
+  <g id="_1" data-name=" 1" class="cls-1">
+    <g class="cls-1">
+      <path class="cls-2" d="M194.88,333.62q-12.9-13.8-12.9-39V186q0-54.6,50.4-54.6,24,0,36.6,13.65t12.6,39.15v3.9h-31.2v-6q0-20.7-17.1-20.7-9.3,0-13.8,5.7t-4.5,20.1v40.2h.6q8.7-18.3,30-18.3,18,0,27.3,12.3t9.3,35.7v37.5q0,25.2-12.9,39t-37.2,13.8Q207.78,347.42,194.88,333.62Zm54.3-36.6v-37.2q0-20.7-17.1-20.7T215,259.82V297q0,20.4,17.1,20.4T249.18,297Z" transform="translate(-181.98 -131.42)"/>
+    </g>
+  </g>
+</svg>
