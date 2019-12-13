@@ -7,8 +7,8 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
   links();
   accordion();
-  // resize();
-  // window.onresize = resize;
+  resize();
+  window.onresize = resize;
   runSplash();
 }
 
