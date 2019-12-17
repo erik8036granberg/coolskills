@@ -6,11 +6,11 @@ let pageContent;
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+  window.onresize = resize;
+  resize();
   getPageContent();
   links();
   accordion();
-  resize();
-  window.onresize = resize;
   setSplash();
 }
 

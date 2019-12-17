@@ -24,7 +24,7 @@ function openMenu() {
   menu.addEventListener("click", closeMenu);
   nav.classList.add("down");
   nav.classList.remove("in");
-  if (window.innerWidth < 900) {
+  if (windowWidth < 900) {
     nav_ul.classList.remove("nav_up");
     nav_ul.classList.add("nav_down");
     logo.classList.add("fadeout");
@@ -39,7 +39,7 @@ function closeMenu() {
   menu.classList.remove("change");
   nav_ul.classList.remove("nav_down");
   nav_ul.classList.add("nav_up");
-  if (window.innerWidth < 900) {
+  if (windowWidth < 900) {
     nav.classList.remove("down");
     nav.classList.remove("in");
     logo.classList.remove("fadeout");
