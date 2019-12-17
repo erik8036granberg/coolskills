@@ -11,7 +11,7 @@ function init() {
   accordion();
   resize();
   window.onresize = resize;
-  runSplash();
+  setSplash();
 }
 
 // - - - - - - - - - - - get page content  - - - - - - - - - - -
@@ -260,23 +260,7 @@ function accordion() {
   }
 }
 
-function runSplash() {
-  document.querySelector("#splash").classList.remove("hide");
-  console.log("runSplash");
-
-  document
-    .querySelector("#splash #fire_frame .bg_image")
-    .classList.remove("zoom");
-  document
-    .querySelector("#splash #postermagic .bg_image")
-    .classList.remove("zoom");
-  document
-    .querySelector("#splash #wondergirl .bg_image")
-    .classList.remove("zoom");
-  document
-    .querySelector("#splash #wondergirl .bg_image")
-    .classList.remove("zoom");
-
+function setSplash() {
   document.querySelector("#splash #fire_frame").classList.add("faded");
   document.querySelector("#splash #skatertricks").classList.add("faded");
   document.querySelector("#splash #postermagic").classList.add("faded");
@@ -285,17 +269,12 @@ function runSplash() {
   document.querySelector("#splash #fedt").classList.add("faded");
   document.querySelector("#splash #support").classList.add("faded");
   document.querySelector("#splash #streetsport").classList.add("faded");
+  document.querySelector("#splash").classList.remove("hide");
+  runSplash();
+}
 
-  document
-    .querySelector("#splash #fire_frame .splash_content")
-    .classList.add("faded");
-  document
-    .querySelector("#splash #skatertricks .splash_content")
-    .classList.add("faded");
-  document
-    .querySelector("#splash #vinkler .splash_content")
-    .classList.add("faded");
-  //run slides
+function runSplash() {
+  console.log("runSplash");
   slide1();
 }
 
@@ -336,6 +315,9 @@ function slide2() {
         document.querySelector("#splash  #skatertricks").classList.add("faded");
       }, 1000);
       setTimeout(function() {
+        document
+          .querySelector("#splash #fire_frame .bg_image")
+          .classList.remove("zoom");
         slide3();
       }, 500);
     }, 2000);
@@ -371,6 +353,9 @@ function slide4() {
         document.querySelector("#splash #vinkler").classList.add("faded");
       }, 1000);
       setTimeout(function() {
+        document
+          .querySelector("#splash #postermagic .bg_image")
+          .classList.remove("zoom");
         slide5();
       }, 500);
     }, 2000);
@@ -404,6 +389,9 @@ function slide6() {
         document.querySelector("#splash #fedt").classList.add("faded");
       }, 1000);
       setTimeout(function() {
+        document
+          .querySelector("#splash #wondergirl .bg_image")
+          .classList.remove("zoom");
         slide7();
       }, 500);
     }, 2000);
