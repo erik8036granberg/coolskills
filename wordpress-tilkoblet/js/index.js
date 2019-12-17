@@ -302,17 +302,17 @@ function slide1() {
 
 function slide2() {
   swapWhite();
-  document.querySelector("#splash  #skatertricks").classList.remove("faded");
+  document.querySelector("#splash #skatertricks").classList.remove("faded");
   setTimeout(function() {
     document
-      .querySelector("#splash  #skatertricks .splash_content")
+      .querySelector("#splash #skatertricks .splash_content")
       .classList.remove("faded");
     setTimeout(function() {
       document
-        .querySelector("#splash  #skatertricks .splash_content")
+        .querySelector("#splash #skatertricks .splash_content")
         .classList.add("faded");
       setTimeout(function() {
-        document.querySelector("#splash  #skatertricks").classList.add("faded");
+        document.querySelector("#splash #skatertricks").classList.add("faded");
       }, 1000);
       setTimeout(function() {
         document
@@ -321,7 +321,7 @@ function slide2() {
         slide3();
       }, 500);
     }, 2000);
-  }, 1000);
+  }, 2000);
 }
 
 function slide3() {

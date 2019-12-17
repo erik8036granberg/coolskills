@@ -501,7 +501,7 @@ nav.in {
 }
 
 .zoom {
-  animation: zoom forwards 10s ease-out;
+  animation: zoom forwards 7s ease-out;
 }
 
 @keyframes zoom {
@@ -1360,7 +1360,7 @@ section > h2 {
 }
 
 #bestil p {
-  margin: 0 0 0 0;
+  margin: 0 0 1rem 0;
 }
 
 #bestil .order_flow {
@@ -1422,6 +1422,7 @@ section > h2 {
   text-align: center;
   margin: 2rem 0 0;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 #bestil .indiegogo_link:hover {
@@ -1777,7 +1778,7 @@ footer .support {
     font-size: 8vh;
     line-height: 7vh;
     max-width: 90vw;
-    margin: 0 auto 3rem;
+    margin: 2rem auto 3rem;
     padding: 0 0 0;
     transition: 1s;
     z-index: 999;
@@ -1785,7 +1786,7 @@ footer .support {
 
   #splash h3 {
     font-size: 5vh;
-    line-height: 7vh;
+    line-height: 6vh;
     max-width: 90vw;
     margin: 0 auto;
     transition: 1s;
@@ -2014,7 +2015,7 @@ footer .support {
   }
 
   #bestil p {
-    margin: 0 0 0 0;
+    margin: 0 0 1rem 0;
     padding: 0 0 0 0;
   }
 
@@ -2529,7 +2530,7 @@ footer .support {
     background-image: url(../img/wondergirl_hd_desktop.jpg);
   }
 
-  #splash h1,
+  /* #splash h1, */
   #splash h2 #splash h3 {
     max-width: 50vw;
   }
