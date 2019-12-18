@@ -22,14 +22,11 @@ function getPageContent() {
     .then(res => res.json())
     .then(data => {
       pageContent = data;
-      console.log("data fetch");
-      console.log(pageContent);
       insertPageContent();
     });
 }
 
 function insertPageContent() {
-  console.log("insertPageContent");
   let dest = document.querySelector("[data-container]");
 
   // - - - - - - - - - - - page title & description - - - - - - - - - - -
@@ -222,7 +219,6 @@ function insertPageContent() {
 }
 
 function links() {
-  console.log("links");
   document.querySelector(".more_wrapper").addEventListener("click", () => {
     window.location = "index.html#koncept";
   });
@@ -233,7 +229,6 @@ function links() {
 
 function resize() {
   windowWidth = window.innerWidth;
-  console.log(windowWidth);
   accordion();
 }
 
@@ -261,6 +256,7 @@ function accordion() {
 }
 
 function setSplash() {
+  document.querySelector("#splash").classList.remove("hide");
   document.querySelector("#splash #fire_frame").classList.add("faded");
   document.querySelector("#splash #skatertricks").classList.add("faded");
   document.querySelector("#splash #postermagic").classList.add("faded");
@@ -269,12 +265,11 @@ function setSplash() {
   document.querySelector("#splash #fedt").classList.add("faded");
   document.querySelector("#splash #support").classList.add("faded");
   document.querySelector("#splash #streetsport").classList.add("faded");
-  document.querySelector("#splash").classList.remove("hide");
+
   runSplash();
 }
 
 function runSplash() {
-  console.log("runSplash");
   slide1();
 }
 
@@ -312,7 +307,7 @@ function slide2() {
         .querySelector("#splash #skatertricks .splash_content")
         .classList.add("faded");
       setTimeout(function() {
-        document.querySelector("#splash #skatertricks").classList.add("faded");
+        document.querySelector("#splash  #skatertricks").classList.add("faded");
       }, 1000);
       setTimeout(function() {
         document
@@ -415,7 +410,7 @@ function slide7() {
       setTimeout(function() {
         slide8();
       }, 500);
-    }, 3000);
+    }, 2000);
   }, 1000);
 }
 
