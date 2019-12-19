@@ -105,7 +105,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", Impact, sans-serif;
 }
 
 h1 {
@@ -170,7 +170,7 @@ nav {
 
 nav ul {
   color: #fff;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", Impact, sans-serif;
   font-size: 2rem;
   line-height: auto;
   transition: 0.3s ease-out;
@@ -490,7 +490,7 @@ nav.in {
 }
 
 #splash #streetsport img {
-  max-width: 12rem;
+  max-width: 10rem;
   margin: 2rem 0 2rem;
 }
 
@@ -534,7 +534,7 @@ main .more_wrapper {
   top: -20vh;
   left: 50%;
   transform: translateX(-50%);
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", Impact, sans-serif;
   font-size: 1.3rem;
   cursor: pointer;
   z-index: 999;
@@ -682,6 +682,7 @@ section > h2 {
 #koncept .ar_info h5,
 #koncept .support_info h5 {
   font-size: 1.75rem;
+  margin: 0 0 1rem;
 }
 
 #koncept .support_info {
@@ -1367,7 +1368,7 @@ section > h2 {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-gap: 1.5rem;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", Impact, sans-serif;
 }
 
 #bestil .box {
@@ -1414,7 +1415,7 @@ section > h2 {
 #bestil .indiegogo_link {
   color: #000;
   background-color: #fff;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", Impact, sans-serif;
   font-size: 1.5rem;
   line-height: 0;
   border-radius: 1rem;
@@ -1456,6 +1457,14 @@ section > h2 {
   background-position: center center;
   background-image: url(../img/two_kids_web.png);
   align-self: flex-end;
+}
+
+#besil a.link {
+  transition: 0.5s;
+}
+
+#bestil a:hover {
+  color: var(--theme-blue);
 }
 
 /* footer */
@@ -1704,7 +1713,7 @@ footer .support {
   }
 
   nav ul {
-    font-family: "Bebas Neue", cursive;
+    font-family: "Bebas Neue", Impact, sans-serif;
     font-size: 1.5rem;
     line-height: 2rem;
     margin: 0 1rem 0 0;
